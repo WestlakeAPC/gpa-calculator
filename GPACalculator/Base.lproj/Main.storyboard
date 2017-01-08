@@ -52,7 +52,7 @@
         <!--Item-->
         <scene sceneID="SQD-fo-bDQ">
             <objects>
-                <viewController id="wZ7-RG-r3L" sceneMemberID="viewController">
+                <viewController id="wZ7-RG-r3L" customClass="ThirdViewController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s8I-Ji-43m"/>
                         <viewControllerLayoutGuide type="bottom" id="UPz-Xf-AJM"/>
