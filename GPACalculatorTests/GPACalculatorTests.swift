@@ -2,8 +2,8 @@
 //  GPACalculatorTests.swift
 //  GPACalculatorTests
 //
-//  Created by Joseph Jin on 12/8/16.
-//  Copyright © 2016 Animator Joe. All rights reserved.
+//  Created by Joseph Jin on 1/8/17.
+//  Copyright © 2017 Animator Joe. All rights reserved.
 //
 
 import XCTest

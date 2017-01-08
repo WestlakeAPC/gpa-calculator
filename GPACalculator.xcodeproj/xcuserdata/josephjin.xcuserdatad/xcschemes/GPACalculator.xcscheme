@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "739BF49C1DFA1C4100C2DD8D"
+               BlueprintIdentifier = "7366FE201E22B41F003DF366"
                BuildableName = "GPACalculator.app"
                BlueprintName = "GPACalculator"
                ReferencedContainer = "container:GPACalculator.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "739BF4B21DFA1C4100C2DD8D"
+               BlueprintIdentifier = "7366FE361E22B41F003DF366"
                BuildableName = "GPACalculatorTests.xctest"
                BlueprintName = "GPACalculatorTests"
                ReferencedContainer = "container:GPACalculator.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "739BF4BD1DFA1C4100C2DD8D"
+               BlueprintIdentifier = "7366FE411E22B41F003DF366"
                BuildableName = "GPACalculatorUITests.xctest"
                BlueprintName = "GPACalculatorUITests"
                ReferencedContainer = "container:GPACalculator.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "739BF49C1DFA1C4100C2DD8D"
+            BlueprintIdentifier = "7366FE201E22B41F003DF366"
             BuildableName = "GPACalculator.app"
             BlueprintName = "GPACalculator"
             ReferencedContainer = "container:GPACalculator.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "739BF49C1DFA1C4100C2DD8D"
+            BlueprintIdentifier = "7366FE201E22B41F003DF366"
             BuildableName = "GPACalculator.app"
             BlueprintName = "GPACalculator"
             ReferencedContainer = "container:GPACalculator.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "739BF49C1DFA1C4100C2DD8D"
+            BlueprintIdentifier = "7366FE201E22B41F003DF366"
             BuildableName = "GPACalculator.app"
             BlueprintName = "GPACalculator"
             ReferencedContainer = "container:GPACalculator.xcodeproj">
