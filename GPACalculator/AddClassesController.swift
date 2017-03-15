@@ -28,10 +28,30 @@ class AddClassesController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addNewClass(_ sender: Any) {
+        if classNameField.text! != nil && multiplierField.text! != nil && currentGradeField.text! != nil{
+            classesAndGrades.append(Information(name: classNameField.text!,
+                                            grade: Int(currentGradeField.text!)!,
+                                            mult: Double(multiplierField.text!)!))
+            
+            UserDefaults.standard.set(classesAndGrades, forKey: "gradesStructure")
+            warningLabel.isHidden = true
+            
+        }
+        
+        warningLabel.isHidden = false
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     /*
      // MARK: - Navigation
      

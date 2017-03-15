@@ -184,6 +184,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmi-o9-6B8">
                                 <rect key="frame" x="20" y="542" width="335" height="30"/>
                                 <state key="normal" title="Add Class"/>
+                                <connections>
+                                    <action selector="addNewClass:" destination="c0h-fF-BzU" eventType="touchUpInside" id="x8V-L8-J3X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You have missing information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-cP-Jaa">
                                 <rect key="frame" x="16" y="513" width="339" height="21"/>
