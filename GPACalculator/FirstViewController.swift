@@ -1,4 +1,6 @@
 //
+//  Edit Classes
+//
 //  FirstViewController.swift
 //  GPACalculator
 //
@@ -7,6 +9,8 @@
 //
 
 import UIKit
+
+var classesAndGrades = [classInfo]()
 
 class FirstViewController: UIViewController {
 

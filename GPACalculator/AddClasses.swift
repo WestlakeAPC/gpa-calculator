@@ -1,15 +1,19 @@
 //
-//  ThirdViewController.swift
+//  Add Classes
+//
+//  AddClasses.swift
 //  GPACalculator
 //
-//  Created by Joseph Jin on 1/8/17.
+//  Created by Joseph Jin on 3/14/17.
 //  Copyright © 2017 Animator Joe. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class AddClasses: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
