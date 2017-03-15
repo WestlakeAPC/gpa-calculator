@@ -10,7 +10,7 @@
 
 import UIKit
 
-var classesAndGrades = [classInfo]()
+var classesAndGrades = [ClassInfo]()
 
 class FirstViewController: UIViewController {
 
