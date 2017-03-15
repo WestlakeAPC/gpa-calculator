@@ -11,6 +11,10 @@
 import UIKit
 
 class AddClassesController: UIViewController {
+
+    @IBOutlet var classNameField: UITextField!
+    @IBOutlet var multiplierField: UITextField!
+    @IBOutlet var currentGradeField: UITextField!
     
     @IBOutlet var warningLabel: UILabel!
     

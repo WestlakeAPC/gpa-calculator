@@ -227,6 +227,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="HgI-dL-7Hh"/>
                     <connections>
+                        <outlet property="classNameField" destination="tvo-zN-BFK" id="ONZ-4Z-2pu"/>
+                        <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
+                        <outlet property="multiplierField" destination="kzn-pw-oIf" id="gh5-Uo-mmS"/>
                         <outlet property="warningLabel" destination="U6p-cP-Jaa" id="eyz-pL-vKy"/>
                     </connections>
                 </viewController>
