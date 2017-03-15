@@ -10,7 +10,7 @@
 
 import UIKit
 
-class AddClasses: UIViewController {
+class AddClassesController: UIViewController {
 
     
     

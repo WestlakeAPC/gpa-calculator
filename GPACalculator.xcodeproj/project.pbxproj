@@ -16,7 +16,7 @@
 		7366FE311E22B41F003DF366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7366FE2F1E22B41F003DF366 /* LaunchScreen.storyboard */; };
 		7366FE3C1E22B41F003DF366 /* GPACalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE3B1E22B41F003DF366 /* GPACalculatorTests.swift */; };
 		7366FE471E22B41F003DF366 /* GPACalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE461E22B41F003DF366 /* GPACalculatorUITests.swift */; };
-		73AAEC191E78E2F300694AD0 /* AddClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAEC181E78E2F300694AD0 /* AddClasses.swift */; };
+		73AAEC191E78E2F300694AD0 /* AddClassesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAEC181E78E2F300694AD0 /* AddClassesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		7366FE421E22B41F003DF366 /* GPACalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPACalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7366FE461E22B41F003DF366 /* GPACalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorUITests.swift; sourceTree = "<group>"; };
 		7366FE481E22B41F003DF366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73AAEC181E78E2F300694AD0 /* AddClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClasses.swift; sourceTree = "<group>"; };
+		73AAEC181E78E2F300694AD0 /* AddClassesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				7366FE241E22B41F003DF366 /* AppDelegate.swift */,
 				73613FE31E78E7B1008A913A /* Information.swift */,
 				7366FE261E22B41F003DF366 /* FirstViewController.swift */,
-				73AAEC181E78E2F300694AD0 /* AddClasses.swift */,
+				73AAEC181E78E2F300694AD0 /* AddClassesController.swift */,
 				7366FE281E22B41F003DF366 /* SecondViewController.swift */,
 				7366FE2A1E22B41F003DF366 /* Main.storyboard */,
 				7366FE2D1E22B41F003DF366 /* Assets.xcassets */,
@@ -274,7 +274,7 @@
 			files = (
 				7366FE291E22B41F003DF366 /* SecondViewController.swift in Sources */,
 				73613FE41E78E7B1008A913A /* Information.swift in Sources */,
-				73AAEC191E78E2F300694AD0 /* AddClasses.swift in Sources */,
+				73AAEC191E78E2F300694AD0 /* AddClassesController.swift in Sources */,
 				7366FE251E22B41F003DF366 /* AppDelegate.swift in Sources */,
 				7366FE271E22B41F003DF366 /* FirstViewController.swift in Sources */,
 			);
