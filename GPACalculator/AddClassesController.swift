@@ -29,7 +29,7 @@ class AddClassesController: UIViewController {
     }
     
     @IBAction func addNewClass(_ sender: Any) {
-        if classNameField.text! != nil && multiplierField.text! != nil && currentGradeField.text! != nil{
+        if classNameField.text! != "" && multiplierField.text! != "" && currentGradeField.text! != ""{
             classesAndGrades.append(Information(name: classNameField.text!,
                                             grade: Int(currentGradeField.text!)!,
                                             mult: Double(multiplierField.text!)!))
