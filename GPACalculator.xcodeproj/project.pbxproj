@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73613FE41E78E7B1008A913A /* classInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73613FE31E78E7B1008A913A /* classInfo.swift */; };
+		73613FE41E78E7B1008A913A /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73613FE31E78E7B1008A913A /* Information.swift */; };
 		7366FE251E22B41F003DF366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE241E22B41F003DF366 /* AppDelegate.swift */; };
 		7366FE271E22B41F003DF366 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE261E22B41F003DF366 /* FirstViewController.swift */; };
 		7366FE291E22B41F003DF366 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE281E22B41F003DF366 /* SecondViewController.swift */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		73613FE31E78E7B1008A913A /* classInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = classInfo.swift; sourceTree = "<group>"; };
+		73613FE31E78E7B1008A913A /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		7366FE211E22B41F003DF366 /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7366FE241E22B41F003DF366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7366FE261E22B41F003DF366 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7366FE241E22B41F003DF366 /* AppDelegate.swift */,
-				73613FE31E78E7B1008A913A /* classInfo.swift */,
+				73613FE31E78E7B1008A913A /* Information.swift */,
 				7366FE261E22B41F003DF366 /* FirstViewController.swift */,
 				73AAEC181E78E2F300694AD0 /* AddClasses.swift */,
 				7366FE281E22B41F003DF366 /* SecondViewController.swift */,
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7366FE291E22B41F003DF366 /* SecondViewController.swift in Sources */,
-				73613FE41E78E7B1008A913A /* classInfo.swift in Sources */,
+				73613FE41E78E7B1008A913A /* Information.swift in Sources */,
 				73AAEC191E78E2F300694AD0 /* AddClasses.swift in Sources */,
 				7366FE251E22B41F003DF366 /* AppDelegate.swift in Sources */,
 				7366FE271E22B41F003DF366 /* FirstViewController.swift in Sources */,
