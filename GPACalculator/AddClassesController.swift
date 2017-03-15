@@ -12,11 +12,9 @@ import UIKit
 
 class AddClassesController: UIViewController {
     
-    @IBOutlet var warningLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        warningLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +22,9 @@ class AddClassesController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation
