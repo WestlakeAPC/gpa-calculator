@@ -121,7 +121,7 @@
         <!--Add Classes Controller-->
         <scene sceneID="AR0-Ip-RTn">
             <objects>
-                <viewController id="c0h-fF-BzU" customClass="AddClassesController" sceneMemberID="viewController">
+                <viewController id="c0h-fF-BzU" customClass="AddClassesController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SxL-ot-FId"/>
                         <viewControllerLayoutGuide type="bottom" id="PXL-s2-yAu"/>
@@ -226,6 +226,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HgI-dL-7Hh"/>
+                    <connections>
+                        <outlet property="warningLabel" destination="U6p-cP-Jaa" id="eyz-pL-vKy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNA-Rz-CiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
