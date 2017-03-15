@@ -232,6 +232,7 @@
                     <connections>
                         <outlet property="classNameField" destination="tvo-zN-BFK" id="ONZ-4Z-2pu"/>
                         <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
+                        <outlet property="multiplierBar" destination="aVm-Mm-MB3" id="Glh-ZN-3aU"/>
                         <outlet property="multiplierField" destination="kzn-pw-oIf" id="gh5-Uo-mmS"/>
                         <outlet property="warningLabel" destination="U6p-cP-Jaa" id="eyz-pL-vKy"/>
                     </connections>
