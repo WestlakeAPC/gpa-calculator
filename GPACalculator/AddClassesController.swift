@@ -23,10 +23,6 @@ class AddClassesController: UIViewController {
         super.viewDidLoad()
         warningLabel.isHidden = true
         
-        if UserDefaults.standard.object(forKey: "savedList") != nil {
-            classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [Information]
-        }
-        
     }
     
     override func didReceiveMemoryWarning() {

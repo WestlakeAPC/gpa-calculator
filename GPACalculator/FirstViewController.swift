@@ -17,6 +17,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if UserDefaults.standard.object(forKey: "savedList") != nil {
+            classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [Information]
+        }
     }
 
     override func didReceiveMemoryWarning() {
