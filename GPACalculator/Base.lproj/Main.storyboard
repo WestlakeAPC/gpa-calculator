@@ -133,7 +133,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wie-mN-R8Q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Class" id="dfe-W9-nMs"/>
+                                    <navigationItem title="New Class" id="dfe-W9-nMs">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="U7b-Gc-JRW">
+                                            <connections>
+                                                <segue destination="9pv-A4-QxB" kind="show" id="VWB-lB-zki"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOU-yn-1g9">
@@ -194,6 +200,12 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Class Added" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-GU-5ry">
+                                <rect key="frame" x="16" y="513" width="339" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -215,21 +227,27 @@
                             <constraint firstItem="Q0n-e4-w3G" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="NUt-iI-vwd"/>
                             <constraint firstItem="Wie-mN-R8Q" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leading" id="Oib-oP-Aww"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="top" secondItem="Wie-mN-R8Q" secondAttribute="bottom" constant="33" id="U0h-jm-sbQ"/>
+                            <constraint firstItem="tOU-GU-5ry" firstAttribute="top" secondItem="k8X-Rz-gNc" secondAttribute="bottom" constant="179" id="UDV-vh-Nlm"/>
                             <constraint firstItem="kzn-pw-oIf" firstAttribute="leading" secondItem="aVm-Mm-MB3" secondAttribute="trailing" constant="8" id="VMv-Ow-9en"/>
                             <constraint firstItem="aVm-Mm-MB3" firstAttribute="top" secondItem="aVz-72-2dD" secondAttribute="bottom" constant="8" id="W6a-pp-Lxg"/>
                             <constraint firstItem="k8X-Rz-gNc" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="cyP-gY-ChC"/>
                             <constraint firstItem="aVm-Mm-MB3" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="dBo-pt-VOb"/>
                             <constraint firstItem="k8X-Rz-gNc" firstAttribute="top" secondItem="Q0n-e4-w3G" secondAttribute="bottom" constant="8" id="gIB-32-vek"/>
+                            <constraint firstItem="Zmi-o9-6B8" firstAttribute="top" secondItem="tOU-GU-5ry" secondAttribute="bottom" constant="8" id="hyr-Mf-bbY"/>
                             <constraint firstItem="Zmi-o9-6B8" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" constant="4" id="iFQ-h4-uFW"/>
                             <constraint firstItem="Q0n-e4-w3G" firstAttribute="top" secondItem="kzn-pw-oIf" secondAttribute="bottom" constant="40" id="lA0-2x-7zG"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="r8j-aq-7mZ"/>
                             <constraint firstItem="k8X-Rz-gNc" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="tLJ-8n-Fmc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U6p-cP-Jaa" secondAttribute="trailing" id="tmX-Sb-Tzf"/>
                             <constraint firstItem="tvo-zN-BFK" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="vKN-4w-amr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tOU-GU-5ry" secondAttribute="trailing" id="y69-CX-Dkd"/>
+                            <constraint firstItem="tOU-GU-5ry" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="yTP-FE-zQb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HgI-dL-7Hh"/>
                     <connections>
+                        <outlet property="addClassButton" destination="Zmi-o9-6B8" id="IKQ-wT-ejA"/>
+                        <outlet property="addedLabel" destination="tOU-GU-5ry" id="mux-EY-sfR"/>
                         <outlet property="classNameField" destination="tvo-zN-BFK" id="ONZ-4Z-2pu"/>
                         <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
                         <outlet property="multiplierBar" destination="aVm-Mm-MB3" id="Glh-ZN-3aU"/>
@@ -246,4 +264,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VWB-lB-zki"/>
+    </inferredMetricsTieBreakers>
 </document>

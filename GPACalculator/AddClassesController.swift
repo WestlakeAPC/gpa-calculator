@@ -17,12 +17,15 @@ class AddClassesController: UIViewController {
     @IBOutlet var currentGradeField: UITextField!
     
     @IBOutlet var multiplierBar: UISegmentedControl!
+    
     @IBOutlet var warningLabel: UILabel!
+    @IBOutlet var addedLabel: UILabel!
+    @IBOutlet var addClassButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         warningLabel.isHidden = true
-        
+        addedLabel.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,8 +100,16 @@ class AddClassesController: UIViewController {
         classesAndGrades.append([className,multiplier,currentGrade])
             
         UserDefaults.standard.set(classesAndGrades, forKey: "savedList")
-            
+        
+        classNameField.text = ""
+        multiplierField.text = ""
+        multiplierBar.selectedSegmentIndex = 0
+        currentGradeField.text = ""
+        
         warningLabel.isHidden = true
+        addedLabel.isHidden = false
+        addClassButton.isHidden = true
+        
     }
     
     
