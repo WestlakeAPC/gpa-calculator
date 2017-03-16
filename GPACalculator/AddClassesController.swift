@@ -94,7 +94,7 @@ class AddClassesController: UIViewController {
             return
         }
         
-        classesAndGrades.append(Information(name: className, grade: currentGrade, multiplier: multiplier))
+        classesAndGrades.append([className,multiplier,currentGrade])
             
         UserDefaults.standard.set(classesAndGrades, forKey: "savedList")
             

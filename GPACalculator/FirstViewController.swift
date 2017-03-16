@@ -10,7 +10,7 @@
 
 import UIKit
 
-var classesAndGrades = [Information]()
+var classesAndGrades = [[Any]]()
 
 class FirstViewController: UIViewController {
 
@@ -18,7 +18,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if UserDefaults.standard.object(forKey: "savedList") != nil {
-            classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [Information]
+            classesAndGrades = [UserDefaults.standard.object(forKey: "savedList") as! [Any]]
         }
     }
 
