@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct Information {
-    
+class Information: NSCoding {
     var name: String
     var grade: Int
     var multiplier: Double
@@ -20,4 +19,18 @@ struct Information {
         self.grade = grade
         self.multiplier = multiplier
     }
+
+    public required convenience init?(coder aDecoder: NSCoder) {
+        let name = aDecoder.decodeObject(forKey: "name") as! String
+        let grade = aDecoder.decodeInteger(forKey: "grade")
+        let multiplier = aDecoder.decodeDouble(forKey: "multiplier")
+        self.init(name: name, grade: grade, multiplier: multiplier)
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(grade, forKey: "grade")
+        aCoder.encode(multiplier, forKey: "multiplier")
+    }
+
 }
