@@ -39,6 +39,7 @@ class AddClassesController: UIViewController {
         
         // Class name
         guard let className = classNameField.text else {
+            warningLabel.isHidden = false
             print("No class name specified.")
             return
         }
@@ -62,12 +63,14 @@ class AddClassesController: UIViewController {
                 fallthrough
             default:
                 guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
+                    warningLabel.isHidden = false
                     print("No multiplier specified.")
                     return
                 }
                 
                 // Can't use guard without let.
                 guard let _multiplier = Double(multiplierText) else {
+                    warningLabel.isHidden = false
                     print("Malformed multiplier.")
                     return
                 }
@@ -80,10 +83,12 @@ class AddClassesController: UIViewController {
         var currentGrade = -1
         
         guard let currentGradeText = currentGradeField.text, !currentGradeText.isEmpty else {
+            warningLabel.isHidden = false
             print("No current grade specified.")
             return
         }
         guard let _currentGrade = Int(currentGradeText) else {
+            warningLabel.isHidden = false
             print("Malformed current grade.")
             return
         }
