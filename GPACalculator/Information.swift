@@ -12,15 +12,12 @@ struct Information {
     
     var name: String
     var grade: Int
-    var mult: Double
-    var hps: Double
+    var multiplier: Double
     
-    //Initialize
-    init(name:String, grade: Int, mult:Double) {
+    // Initialize
+    init(name: String, grade: Int, multiplier: Double) {
         self.name = name
         self.grade = grade
-        self.mult = mult
-        self.hps = Double(grade) * mult
+        self.multiplier = multiplier
     }
-    
 }

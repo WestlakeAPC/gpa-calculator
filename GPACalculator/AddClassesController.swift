@@ -38,12 +38,16 @@ class AddClassesController: UIViewController {
     
     @IBAction func addNewClass(_ sender: Any) {
         
-        //Class name
-        var className = classNameField.text!
+        // Class name
+        guard let className = classNameField.text else {
+            print("No class name specified.")
+            return
+        }
+        
         print(className)
         
-        //Multiplier
-        var multiplier:Double = -1
+        // Multiplier
+        var multiplier: Double = -1
         
         switch multiplierBar.selectedSegmentIndex {
             case 0:
@@ -56,41 +60,49 @@ class AddClassesController: UIViewController {
                 multiplier = 1.2
                 break
             case 3:
-                if multiplierField.text != ""{
-                    multiplier = Double(multiplierField.text!)!
-                }
+                fallthrough
             default:
-                if multiplierField.text != ""{
-                    multiplier = Double(multiplierField.text!)!
-            }
+                guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
+                    print("No multiplier specified.")
+                    return
+                }
+                
+                // Can't use guard without let.
+                guard let _multiplier = Double(multiplierText) else {
+                    print("Malformed multiplier.")
+                    return
+                }
+                multiplier = _multiplier
         }
+        
         print(multiplier)
         
-        //Current grade
+        // Current grade
         var currentGrade = -1
         
-        if currentGradeField.text! != "" {
-            currentGrade = Int(currentGradeField.text!)!
+        guard let currentGradeText = currentGradeField.text, !currentGradeText.isEmpty else {
+            print("No current grade specified.")
+            return
         }
+        guard let _currentGrade = Int(currentGradeText) else {
+            print("Malformed current grade.")
+            return
+        }
+        currentGrade = _currentGrade
+        
         print(currentGrade)
         
-        //Add class
-        if className != "" && multiplier != -1 && currentGrade != -1{
-            
-            print(className + " " + String(currentGrade) + " " + String(multiplier))
-            
-            classesAndGrades.append(Information(name: className, grade: currentGrade, mult: multiplier))
-            
-            UserDefaults.standard.set(classesAndGrades, forKey: "savedList")
-            
-            warningLabel.isHidden = true
-            
-        } else {
-        
+        // Add the classclass
+        guard className != "", multiplier != -1, currentGrade != -1 else {
             warningLabel.isHidden = false
-            
+            return
         }
         
+        classesAndGrades.append(Information(name: className, grade: currentGrade, multiplier: multiplier))
+            
+        UserDefaults.standard.set(classesAndGrades, forKey: "savedList")
+            
+        warningLabel.isHidden = true
     }
     
     
