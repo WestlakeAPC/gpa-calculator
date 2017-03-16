@@ -22,10 +22,13 @@ class AddClassesController: UIViewController {
     @IBOutlet var addedLabel: UILabel!
     @IBOutlet var addClassButton: UIButton!
     
+    @IBOutlet var doneButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         warningLabel.isHidden = true
         addedLabel.isHidden = true
+        doneButton.isEnabled = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,6 +117,7 @@ class AddClassesController: UIViewController {
         warningLabel.isHidden = true
         addedLabel.isHidden = false
         addClassButton.isHidden = true
+        doneButton.isEnabled = true
         
     }
     
