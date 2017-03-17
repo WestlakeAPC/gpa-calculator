@@ -40,7 +40,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-Be-raa">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="fyX-oO-T1c">
@@ -72,6 +72,7 @@
                     <tabBarItem key="tabBarItem" title="Edit Grades" image="second" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="classTable" destination="Cyt-Be-raa" id="Taf-hv-P0l"/>
+                        <outlet property="editOption" destination="WUp-My-Vx5" id="7lM-Rf-VMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -250,7 +251,7 @@
                                     <action selector="addNewClass:" destination="c0h-fF-BzU" eventType="touchUpInside" id="x8V-L8-J3X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have missing information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-cP-Jaa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have missing information." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-cP-Jaa">
                                 <rect key="frame" x="16" y="456" width="341" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -332,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="1501.5999999999999" y="-0.44977511244377816"/>
         </scene>
-        <!--Grade Changer Controller-->
+        <!--Class Selector Controller-->
         <scene sceneID="7LV-Jm-fyX">
             <objects>
-                <viewController id="0ka-8a-8aj" customClass="GradeChangerController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0ka-8a-8aj" customClass="ClassSelectorController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Br-3O-I86"/>
                         <viewControllerLayoutGuide type="bottom" id="qqc-Un-rAN"/>
@@ -362,58 +363,121 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-Oa-g4i">
-                                <rect key="frame" x="21" y="404" width="333" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
-                                <rect key="frame" x="21" y="442" width="333" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
+                                <rect key="frame" x="16" y="585" width="333" height="30"/>
                                 <state key="normal" title="Submit"/>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-PC-6UV">
-                                <rect key="frame" x="-5" y="91" width="375" height="216"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-PC-6UV">
+                                <rect key="frame" x="16" y="91" width="375" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0ka-8a-8aj" id="3rf-On-sfD"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Class Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aZ-j0-abL">
-                                <rect key="frame" x="16" y="375" width="338" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You have missing information." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOZ-6o-pTV">
+                                <rect key="frame" x="16" y="556" width="328" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMd-4d-VZq">
+                                <rect key="frame" x="16" y="279" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOZ-6o-pTV">
-                                <rect key="frame" x="23" y="447" width="328" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: Latin 12 AP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-ld-VYY">
+                                <rect key="frame" x="16" y="308" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Multiplier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-9i-k0S">
+                                <rect key="frame" x="16" y="354" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Other" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fld-cv-XDb">
+                                <rect key="frame" x="302" y="383" width="58" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Other" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNi-Nd-dId">
+                                <rect key="frame" x="302" y="520" width="58" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Current Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-FZ-S7B">
+                                <rect key="frame" x="16" y="423" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-YF-lBy">
+                                <rect key="frame" x="16" y="452" width="339" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WSd-GO-fCa">
+                                <rect key="frame" x="16" y="384" width="277" height="29"/>
+                                <segments>
+                                    <segment title="x1"/>
+                                    <segment title="x1.1"/>
+                                    <segment title="x1.2"/>
+                                    <segment title="Other"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kAX-TC-Ga4">
+                                <rect key="frame" x="16" y="520" width="277" height="29"/>
+                                <segments>
+                                    <segment title="0.5"/>
+                                    <segment title="1.0"/>
+                                    <segment title="Other"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfR-MI-cDB">
+                                <rect key="frame" x="16" y="490" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Updated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpq-gZ-uRO">
+                                <rect key="frame" x="50" y="590" width="274" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sOZ-6o-pTV" firstAttribute="top" secondItem="KMR-Oa-g4i" secondAttribute="bottom" constant="13" id="1Ad-Nq-1rz"/>
+                            <constraint firstItem="kAX-TC-Ga4" firstAttribute="top" secondItem="hfR-MI-cDB" secondAttribute="bottom" constant="8" id="0tg-QC-Aaf"/>
+                            <constraint firstItem="aNi-Nd-dId" firstAttribute="leading" secondItem="kAX-TC-Ga4" secondAttribute="trailing" constant="8" id="1RK-9c-Hcb"/>
                             <constraint firstItem="pEY-Yu-Mol" firstAttribute="top" secondItem="5tl-yN-EGX" secondAttribute="top" id="2jj-6u-iF0"/>
                             <constraint firstItem="sOZ-6o-pTV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="7" id="8QR-kY-6Ee"/>
+                            <constraint firstItem="dB6-9i-k0S" firstAttribute="top" secondItem="SNz-ld-VYY" secondAttribute="bottom" constant="40" id="ALW-JH-RCm"/>
                             <constraint firstItem="d7M-1B-pBC" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" id="CSN-Gh-HEo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8aZ-j0-abL" secondAttribute="trailing" constant="5" id="KQ3-9z-1Ki"/>
+                            <constraint firstItem="Fld-cv-XDb" firstAttribute="top" secondItem="dB6-9i-k0S" secondAttribute="bottom" constant="8" id="Hqd-NU-zNc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOZ-6o-pTV" secondAttribute="trailing" constant="8" id="Lv5-R2-Eev"/>
-                            <constraint firstItem="8aZ-j0-abL" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" id="Me5-tj-2Fs"/>
+                            <constraint firstItem="JhE-YF-lBy" firstAttribute="top" secondItem="dbm-FZ-S7B" secondAttribute="bottom" constant="8" id="O3O-e8-nyn"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="top" secondItem="d7M-1B-pBC" secondAttribute="bottom" constant="8" id="QAn-Pb-DNC"/>
-                            <constraint firstItem="KMR-Oa-g4i" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="5" id="QPL-Ws-uka"/>
                             <constraint firstItem="d7M-1B-pBC" firstAttribute="top" secondItem="pEY-Yu-Mol" secondAttribute="bottom" constant="18" id="QTb-pB-YUd"/>
                             <constraint firstAttribute="trailing" secondItem="pEY-Yu-Mol" secondAttribute="trailing" id="S2E-Ml-QYC"/>
                             <constraint firstItem="m2e-h7-Sje" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="5" id="SJ1-2T-Xu2"/>
+                            <constraint firstItem="aNi-Nd-dId" firstAttribute="top" secondItem="JhE-YF-lBy" secondAttribute="bottom" constant="70" id="Sqs-9n-eDf"/>
+                            <constraint firstItem="Fld-cv-XDb" firstAttribute="leading" secondItem="WSd-GO-fCa" secondAttribute="trailing" constant="8" id="VJP-yi-rN4"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-21" id="VzB-54-fUl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FeU-PC-6UV" secondAttribute="trailing" constant="-11" id="aTq-RV-1pw"/>
                             <constraint firstItem="pEY-Yu-Mol" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" id="cMk-t2-L3S"/>
-                            <constraint firstItem="8aZ-j0-abL" firstAttribute="top" secondItem="FeU-PC-6UV" secondAttribute="bottom" constant="68" id="kpi-Ou-Slc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KMR-Oa-g4i" secondAttribute="trailing" constant="5" id="lmT-He-Eif"/>
+                            <constraint firstItem="SNz-ld-VYY" firstAttribute="top" secondItem="EMd-4d-VZq" secondAttribute="bottom" constant="8" id="gsA-mH-fcd"/>
+                            <constraint firstItem="WSd-GO-fCa" firstAttribute="top" secondItem="dB6-9i-k0S" secondAttribute="bottom" constant="8" id="i5p-gQ-3pt"/>
+                            <constraint firstItem="hfR-MI-cDB" firstAttribute="top" secondItem="JhE-YF-lBy" secondAttribute="bottom" constant="42" id="jgK-Eu-cVC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m2e-h7-Sje" secondAttribute="trailing" constant="5" id="p3R-h6-O9v"/>
-                            <constraint firstItem="KMR-Oa-g4i" firstAttribute="top" secondItem="8aZ-j0-abL" secondAttribute="bottom" constant="8" id="tYM-i4-kuH"/>
+                            <constraint firstItem="dbm-FZ-S7B" firstAttribute="top" secondItem="WSd-GO-fCa" secondAttribute="bottom" constant="42" id="qdq-Hd-oEa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d7M-1B-pBC" secondAttribute="trailing" constant="10" id="wOR-ny-DdH"/>
-                            <constraint firstItem="m2e-h7-Sje" firstAttribute="top" secondItem="KMR-Oa-g4i" secondAttribute="bottom" constant="8" id="yri-0D-dVe"/>
                         </constraints>
                     </view>
                     <connections>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradeChangerController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var selected = 0;
     
