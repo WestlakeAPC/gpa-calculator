@@ -143,7 +143,7 @@
                                     <navigationItem title="New Class" id="dfe-W9-nMs">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="U7b-Gc-JRW">
                                             <connections>
-                                                <segue destination="9pv-A4-QxB" kind="show" id="VWB-lB-zki"/>
+                                                <segue destination="49e-Tb-3d3" kind="show" id="fVC-Jc-FY2"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -271,7 +271,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="VWB-lB-zki"/>
-    </inferredMetricsTieBreakers>
 </document>
