@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="728.18590704647681"/>
+            <point key="canvasLocation" x="-1" y="797"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="1501.5999999999999" y="-0.44977511244377816"/>
         </scene>
-        <!--View Controller-->
+        <!--Grade Changer Controller-->
         <scene sceneID="7LV-Jm-fyX">
             <objects>
-                <viewController id="0ka-8a-8aj" sceneMemberID="viewController">
+                <viewController id="0ka-8a-8aj" customClass="GradeChangerController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Br-3O-I86"/>
                         <viewControllerLayoutGuide type="bottom" id="qqc-Un-rAN"/>
