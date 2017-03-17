@@ -43,9 +43,19 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = String(describing: classesAndGrades[indexPath.row])
+        cell.textLabel?.text = String(describing: classesAndGrades[indexPath.row][0]) + ": " + String(describing: classesAndGrades[indexPath.row][2])
         
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            classesAndGrades.remove(at: indexPath.row)
+            UserDefaults.standard.set(classesAndGrades, forKey: "savedList")
+            classTable.reloadData()
+        }
         
     }
 
