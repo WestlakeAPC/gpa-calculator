@@ -347,21 +347,82 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEY-Yu-Mol">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Change Grade" id="QQJ-Rz-RSJ"/>
+                                    <navigationItem title="Change Grade" id="QQJ-Rz-RSJ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uc9-vR-djH">
+                                            <connections>
+                                                <segue destination="9pv-A4-QxB" kind="show" id="db2-tY-NFC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Class to Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7M-1B-pBC">
+                                <rect key="frame" x="16" y="62" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-Oa-g4i">
+                                <rect key="frame" x="21" y="404" width="333" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
+                                <rect key="frame" x="21" y="442" width="333" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-PC-6UV">
+                                <rect key="frame" x="-5" y="91" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0ka-8a-8aj" id="3rf-On-sfD"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Class Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aZ-j0-abL">
+                                <rect key="frame" x="16" y="375" width="338" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOZ-6o-pTV">
+                                <rect key="frame" x="23" y="447" width="328" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sOZ-6o-pTV" firstAttribute="top" secondItem="KMR-Oa-g4i" secondAttribute="bottom" constant="13" id="1Ad-Nq-1rz"/>
                             <constraint firstItem="pEY-Yu-Mol" firstAttribute="top" secondItem="5tl-yN-EGX" secondAttribute="top" id="2jj-6u-iF0"/>
+                            <constraint firstItem="sOZ-6o-pTV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="7" id="8QR-kY-6Ee"/>
+                            <constraint firstItem="d7M-1B-pBC" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" id="CSN-Gh-HEo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8aZ-j0-abL" secondAttribute="trailing" constant="5" id="KQ3-9z-1Ki"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sOZ-6o-pTV" secondAttribute="trailing" constant="8" id="Lv5-R2-Eev"/>
+                            <constraint firstItem="8aZ-j0-abL" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" id="Me5-tj-2Fs"/>
+                            <constraint firstItem="FeU-PC-6UV" firstAttribute="top" secondItem="d7M-1B-pBC" secondAttribute="bottom" constant="8" id="QAn-Pb-DNC"/>
+                            <constraint firstItem="KMR-Oa-g4i" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="5" id="QPL-Ws-uka"/>
+                            <constraint firstItem="d7M-1B-pBC" firstAttribute="top" secondItem="pEY-Yu-Mol" secondAttribute="bottom" constant="18" id="QTb-pB-YUd"/>
                             <constraint firstAttribute="trailing" secondItem="pEY-Yu-Mol" secondAttribute="trailing" id="S2E-Ml-QYC"/>
+                            <constraint firstItem="m2e-h7-Sje" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="5" id="SJ1-2T-Xu2"/>
+                            <constraint firstItem="FeU-PC-6UV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-21" id="VzB-54-fUl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FeU-PC-6UV" secondAttribute="trailing" constant="-11" id="aTq-RV-1pw"/>
                             <constraint firstItem="pEY-Yu-Mol" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" id="cMk-t2-L3S"/>
+                            <constraint firstItem="8aZ-j0-abL" firstAttribute="top" secondItem="FeU-PC-6UV" secondAttribute="bottom" constant="68" id="kpi-Ou-Slc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KMR-Oa-g4i" secondAttribute="trailing" constant="5" id="lmT-He-Eif"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m2e-h7-Sje" secondAttribute="trailing" constant="5" id="p3R-h6-O9v"/>
+                            <constraint firstItem="KMR-Oa-g4i" firstAttribute="top" secondItem="8aZ-j0-abL" secondAttribute="bottom" constant="8" id="tYM-i4-kuH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d7M-1B-pBC" secondAttribute="trailing" constant="10" id="wOR-ny-DdH"/>
+                            <constraint firstItem="m2e-h7-Sje" firstAttribute="top" secondItem="KMR-Oa-g4i" secondAttribute="bottom" constant="8" id="yri-0D-dVe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="FeU-PC-6UV" id="Nki-tn-m5z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtn-ak-bWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="797"/>
+            <point key="canvasLocation" x="1501.5999999999999" y="796.55172413793105"/>
         </scene>
     </scenes>
     <resources>
@@ -370,5 +431,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fVC-Jc-FY2"/>
+        <segue reference="db2-tY-NFC"/>
     </inferredMetricsTieBreakers>
 </document>

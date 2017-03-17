@@ -8,12 +8,17 @@
 
 import UIKit
 
-class GradeChangerController: UIViewController {
-
+class GradeChangerController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var selected = 0;
+    
+    @IBOutlet var picker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        picker.delegate = self
+        picker.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +26,20 @@ class GradeChangerController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return (Information.classesAndGrades[row]["name"] as! String?)! as String
     }
-    */
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int{
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        return Information.classesAndGrades.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selected = row
+    }
 
 }
