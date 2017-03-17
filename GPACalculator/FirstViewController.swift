@@ -20,7 +20,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if UserDefaults.standard.object(forKey: "savedList") != nil {
-            classesAndGrades = [UserDefaults.standard.object(forKey: "savedList") as! [Any]]
+            classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[Any]]
         }
     }
     
@@ -44,8 +44,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
         cell.textLabel?.text = String(describing: classesAndGrades[indexPath.row])
-        //print(String(indexPath.row) + String(describing: classesAndGrades[indexPath.row][0]))
-        //print(String(indexPath.row) + " " + String(classesAndGrades[indexPath].count))
         
         return cell
         
