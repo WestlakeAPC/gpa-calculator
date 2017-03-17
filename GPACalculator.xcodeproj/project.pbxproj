@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73226DA41E78FA100067420D /* AddClassesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226DA31E78FA100067420D /* AddClassesController.swift */; };
+		73226DB01E7C97080067420D /* GradeChangerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226DAF1E7C97080067420D /* GradeChangerController.swift */; };
 		73613FE41E78E7B1008A913A /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73613FE31E78E7B1008A913A /* Information.swift */; };
 		7366FE251E22B41F003DF366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE241E22B41F003DF366 /* AppDelegate.swift */; };
 		7366FE271E22B41F003DF366 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE261E22B41F003DF366 /* FirstViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		73226DA31E78FA100067420D /* AddClassesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesController.swift; sourceTree = "<group>"; };
+		73226DAF1E7C97080067420D /* GradeChangerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradeChangerController.swift; path = ../GradeChangerController.swift; sourceTree = "<group>"; };
 		73613FE31E78E7B1008A913A /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		7366FE211E22B41F003DF366 /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7366FE241E22B41F003DF366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				73613FE31E78E7B1008A913A /* Information.swift */,
 				7366FE261E22B41F003DF366 /* FirstViewController.swift */,
 				73226DA31E78FA100067420D /* AddClassesController.swift */,
+				73226DAF1E7C97080067420D /* GradeChangerController.swift */,
 				7366FE281E22B41F003DF366 /* SecondViewController.swift */,
 				7366FE2A1E22B41F003DF366 /* Main.storyboard */,
 				7366FE2D1E22B41F003DF366 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73226DB01E7C97080067420D /* GradeChangerController.swift in Sources */,
 				7366FE291E22B41F003DF366 /* SecondViewController.swift in Sources */,
 				73226DA41E78FA100067420D /* AddClassesController.swift in Sources */,
 				73613FE41E78E7B1008A913A /* Information.swift in Sources */,
