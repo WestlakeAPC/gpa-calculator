@@ -15,24 +15,28 @@ class Information: NSCoding {
     var name: String
     var grade: Int
     var multiplier: Double
+    var credits: Double
     
     // Initialize
-    init(name: String, grade: Int, multiplier: Double) {
+    init(name: String, grade: Int, multiplier: Double, credits: Double) {
         self.name = name
         self.grade = grade
         self.multiplier = multiplier
+        self.credits = credits
     }
 
     public required convenience init?(coder aDecoder: NSCoder) {
         let name = aDecoder.decodeObject(forKey: "name") as! String
         let grade = aDecoder.decodeInteger(forKey: "grade")
         let multiplier = aDecoder.decodeDouble(forKey: "multiplier")
-        self.init(name: name, grade: grade, multiplier: multiplier)
+        let credits = aDecoder.decodeDouble(forKey: "credits")
+        self.init(name: name, grade: grade, multiplier: multiplier, credits: credits)
     }
     
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: "name")
         aCoder.encode(grade, forKey: "grade")
         aCoder.encode(multiplier, forKey: "multiplier")
+        aCoder.encode(credits, forKey: "credits")
     }
 }
