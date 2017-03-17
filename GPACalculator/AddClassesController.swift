@@ -59,13 +59,10 @@ class AddClassesController: UIViewController {
         switch multiplierBar.selectedSegmentIndex {
             case 0:
                 multiplier = 1
-                break
             case 1:
                 multiplier = 1.1
-                break
             case 2:
                 multiplier = 1.2
-                break
             case 3:
                 fallthrough
             default:
@@ -103,32 +100,30 @@ class AddClassesController: UIViewController {
         
         print(currentGrade)
         
-        // Multiplier
+        // Credits
         var credit: Double = -1
         
-        switch multiplierBar.selectedSegmentIndex {
-        case 0:
-            credit = 0.5
-            break
-        case 1:
-            credit = 1.0
-            break
-        case 2:
-            fallthrough
-        default:
-            guard let creditText = creditField.text, !creditText.isEmpty else {
-                warningLabel.isHidden = false
-                print("No multiplier specified.")
-                return
-            }
-            
-            // Can't use guard without let.
-            guard let _credit = Double(creditText) else {
-                warningLabel.isHidden = false
-                print("Malformed multiplier.")
-                return
-            }
-            credit = _credit
+        switch creditBar.selectedSegmentIndex {
+            case 0:
+                credit = 0.5
+            case 1:
+                credit = 1.0
+            case 2:
+                fallthrough
+            default:
+                guard let creditText = creditField.text, !creditText.isEmpty else {
+                    warningLabel.isHidden = false
+                    print("No credits specified.")
+                    return
+                }
+                
+                // Can't use guard without let.
+                guard let _credit = Double(creditText) else {
+                    warningLabel.isHidden = false
+                    print("Malformed credits.")
+                    return
+                }
+                credit = _credit
         }
         
         print(credit)
