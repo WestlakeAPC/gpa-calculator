@@ -13,6 +13,7 @@ import UIKit
 class SecondViewController: UIViewController {
     
     @IBOutlet weak var westlakeGPALabel: UILabel!
+    @IBOutlet weak var standardGPALabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +22,29 @@ class SecondViewController: UIViewController {
             Information.classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[String: Any]]
         }
         
-        var totalCredit = 0.0;
+        var totalWestlakeGrades = 0.0;
+        var totalStandardCredit = 0.0;
+        var totalStandardGrades = 0.0;
         
         for classAndGrade in Information.classesAndGrades {
-            totalCredit += (classAndGrade["grade"] as! Double) * (classAndGrade["multiplier"] as! Double)
+            totalWestlakeGrades += (classAndGrade["grade"] as! Double) * (classAndGrade["multiplier"] as! Double)
+            totalStandardGrades += (classAndGrade["grade"] as! Double) * (classAndGrade["credits"] as! Double)
+            totalStandardCredit += classAndGrade["credits"] as! Double
         }
         
-        let westlakeGPA = totalCredit / Double(Information.classesAndGrades.count)
+        guard totalStandardCredit != 0, Information.classesAndGrades.count != 0 else {
+            print("Division by zero in GPA calculation.")
+            
+            westlakeGPALabel.text = ""
+            standardGPALabel.text = ""
+            return
+        }
+        
+        let westlakeGPA = totalWestlakeGrades / Double(Information.classesAndGrades.count)
         westlakeGPALabel.text = "Westlake GPA: \(westlakeGPA)"
+        
+        let standardGPA = totalStandardGrades / totalStandardCredit
+        standardGPALabel.text = "Standard GPA: \(standardGPA)"
     }
 
     override func didReceiveMemoryWarning() {

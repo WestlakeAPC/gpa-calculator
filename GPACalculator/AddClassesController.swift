@@ -15,10 +15,10 @@ class AddClassesController: UIViewController {
     @IBOutlet var classNameField: UITextField!
     @IBOutlet var multiplierField: UITextField!
     @IBOutlet var currentGradeField: UITextField!
-    @IBOutlet var creditField: UITextField!
+    @IBOutlet var creditsField: UITextField!
     
     @IBOutlet var multiplierBar: UISegmentedControl!
-    @IBOutlet var creditBar: UISegmentedControl!
+    @IBOutlet var creditsBar: UISegmentedControl!
     
     @IBOutlet var warningLabel: UILabel!
     @IBOutlet var addedLabel: UILabel!
@@ -101,32 +101,32 @@ class AddClassesController: UIViewController {
         print(currentGrade)
         
         // Credits
-        var credit: Double = -1
+        var credits: Double = -1
         
-        switch creditBar.selectedSegmentIndex {
+        switch creditsBar.selectedSegmentIndex {
             case 0:
-                credit = 0.5
+                credits = 0.5
             case 1:
-                credit = 1.0
+                credits = 1.0
             case 2:
                 fallthrough
             default:
-                guard let creditText = creditField.text, !creditText.isEmpty else {
+                guard let creditsText = creditsField.text, !creditsText.isEmpty else {
                     warningLabel.isHidden = false
                     print("No credits specified.")
                     return
                 }
                 
                 // Can't use guard without let.
-                guard let _credit = Double(creditText) else {
+                guard let _credits = Double(creditsText) else {
                     warningLabel.isHidden = false
                     print("Malformed credits.")
                     return
                 }
-                credit = _credit
+                credits = _credits
         }
         
-        print(credit)
+        print(credits)
         
         // Add the class
         guard className != "", multiplier != -1, currentGrade != -1 else {
@@ -134,7 +134,7 @@ class AddClassesController: UIViewController {
             return
         }
         
-        Information.classesAndGrades.append(["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credit])
+        Information.classesAndGrades.append(["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits])
             
         UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
         
