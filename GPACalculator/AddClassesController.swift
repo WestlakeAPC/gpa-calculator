@@ -99,7 +99,7 @@ class AddClassesController: UIViewController {
         
         print(currentGrade)
         
-        // Add the classclass
+        // Add the class
         guard className != "", multiplier != -1, currentGrade != -1 else {
             warningLabel.isHidden = false
             return

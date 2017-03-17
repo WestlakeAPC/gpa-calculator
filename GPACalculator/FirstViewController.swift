@@ -34,7 +34,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("You have " + String(classesAndGrades.count) + " classes")
+        //print("You have " + String(classesAndGrades.count) + " classes")
         return classesAndGrades.count
         
     }
