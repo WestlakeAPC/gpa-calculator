@@ -10,8 +10,6 @@
 
 import UIKit
 
-var classesAndGrades = [[Any]]()
-
 class FirstViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var classTable: UITableView!
@@ -20,7 +18,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if UserDefaults.standard.object(forKey: "savedList") != nil {
-            classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[Any]]
+            Information.classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[String: Any]]
         }
     }
     
@@ -35,25 +33,15 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //print("You have " + String(classesAndGrades.count) + " classes")
-        return classesAndGrades.count
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        
-        cell.textLabel?.text = String(describing: classesAndGrades[indexPath.row][0]) + ": " + String(describing: classesAndGrades[indexPath.row][2])
-        
-        return cell
+        return Information.classesAndGrades.count
         
     }
     
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
         
         if editingStyle == UITableViewCellEditingStyle.delete{
-            classesAndGrades.remove(at: indexPath.row)
-            UserDefaults.standard.set(classesAndGrades, forKey: "savedList")
+            Information.classesAndGrades.remove(at: indexPath.row)
+            UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
             classTable.reloadData()
         }
         
@@ -67,3 +55,12 @@ class FirstViewController: UIViewController, UITableViewDelegate {
 
 }
 
+extension FirstViewController {
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        
+        cell.textLabel?.text = "\(Information.classesAndGrades[indexPath.row]["name"] as! String): \(Information.classesAndGrades[indexPath.row]["grade"] as! Int)"
+        
+        return cell
+    }
+}

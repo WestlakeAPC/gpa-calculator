@@ -9,6 +9,9 @@
 import Foundation
 
 class Information: NSCoding {
+    
+    static var classesAndGrades = [[String: Any]]()
+    
     var name: String
     var grade: Int
     var multiplier: Double
@@ -32,5 +35,4 @@ class Information: NSCoding {
         aCoder.encode(grade, forKey: "grade")
         aCoder.encode(multiplier, forKey: "multiplier")
     }
-
 }
