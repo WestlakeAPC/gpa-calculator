@@ -141,6 +141,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="New Class" id="dfe-W9-nMs">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pZF-Ly-hsJ">
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="show" id="Cfz-jl-bOm"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="U7b-Gc-JRW">
                                             <connections>
                                                 <segue destination="49e-Tb-3d3" kind="show" id="fVC-Jc-FY2"/>
@@ -254,6 +259,7 @@
                     <connections>
                         <outlet property="addClassButton" destination="Zmi-o9-6B8" id="IKQ-wT-ejA"/>
                         <outlet property="addedLabel" destination="tOU-GU-5ry" id="mux-EY-sfR"/>
+                        <outlet property="cancelButton" destination="pZF-Ly-hsJ" id="sIq-yM-pbG"/>
                         <outlet property="classNameField" destination="tvo-zN-BFK" id="ONZ-4Z-2pu"/>
                         <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
                         <outlet property="doneButton" destination="U7b-Gc-JRW" id="53t-rk-oCo"/>
@@ -271,4 +277,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fVC-Jc-FY2"/>
+    </inferredMetricsTieBreakers>
 </document>
