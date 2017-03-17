@@ -15,8 +15,10 @@ class AddClassesController: UIViewController {
     @IBOutlet var classNameField: UITextField!
     @IBOutlet var multiplierField: UITextField!
     @IBOutlet var currentGradeField: UITextField!
+    @IBOutlet var creditField: UITextField!
     
     @IBOutlet var multiplierBar: UISegmentedControl!
+    @IBOutlet var creditBar: UISegmentedControl!
     
     @IBOutlet var warningLabel: UILabel!
     @IBOutlet var addedLabel: UILabel!
@@ -100,6 +102,36 @@ class AddClassesController: UIViewController {
         currentGrade = _currentGrade
         
         print(currentGrade)
+        
+        // Multiplier
+        var credit: Double = -1
+        
+        switch multiplierBar.selectedSegmentIndex {
+        case 0:
+            credit = 0.5
+            break
+        case 1:
+            credit = 1.0
+            break
+        case 2:
+            fallthrough
+        default:
+            guard let creditText = creditField.text, !creditText.isEmpty else {
+                warningLabel.isHidden = false
+                print("No multiplier specified.")
+                return
+            }
+            
+            // Can't use guard without let.
+            guard let _credit = Double(creditText) else {
+                warningLabel.isHidden = false
+                print("Malformed multiplier.")
+                return
+            }
+            credit = _credit
+        }
+        
+        print(credit)
         
         // Add the class
         guard className != "", multiplier != -1, currentGrade != -1 else {

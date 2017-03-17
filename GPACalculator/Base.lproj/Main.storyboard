@@ -299,6 +299,8 @@
                         <outlet property="addedLabel" destination="tOU-GU-5ry" id="mux-EY-sfR"/>
                         <outlet property="cancelButton" destination="pZF-Ly-hsJ" id="sIq-yM-pbG"/>
                         <outlet property="classNameField" destination="tvo-zN-BFK" id="ONZ-4Z-2pu"/>
+                        <outlet property="creditBar" destination="36Y-JH-cmb" id="KOE-46-vfc"/>
+                        <outlet property="creditField" destination="Fpg-aH-Bxd" id="Mn4-NY-yXH"/>
                         <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
                         <outlet property="doneButton" destination="U7b-Gc-JRW" id="53t-rk-oCo"/>
                         <outlet property="multiplierBar" destination="aVm-Mm-MB3" id="Glh-ZN-3aU"/>
