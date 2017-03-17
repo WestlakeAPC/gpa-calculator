@@ -13,6 +13,7 @@ import UIKit
 class FirstViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var classTable: UITableView!
+    @IBOutlet var editOption: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,11 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         //Updates table
         classTable.reloadData()
+        if(Information.classesAndGrades.count == 0){
+            editOption.isEnabled = false
+        } else {
+            editOption.isEnabled = true
+        }
         //print(classesAndGrades)
     }
     
