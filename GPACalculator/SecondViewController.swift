@@ -21,13 +21,13 @@ class SecondViewController: UIViewController {
             Information.classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[String: Any]]
         }
         
-        let totalCredit = 0;
+        var totalCredit = 0.0;
         
-        for index in Information.classesAndGrades.indices {
-//            totalCredit += Information.classesAndGrades[index]["grade"] * Information.classesAndGrades[index]["multiplier"]
+        for classAndGrade in Information.classesAndGrades {
+            totalCredit += (classAndGrade["grade"] as! Double) * (classAndGrade["multiplier"] as! Double)
         }
         
-        let westlakeGPA = totalCredit / Information.classesAndGrades.count
+        let westlakeGPA = totalCredit / Double(Information.classesAndGrades.count)
         westlakeGPALabel.text = "Westlake GPA: \(westlakeGPA)"
     }
 
