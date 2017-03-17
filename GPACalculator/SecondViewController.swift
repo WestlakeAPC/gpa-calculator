@@ -42,7 +42,7 @@ class SecondViewController: UIViewController {
             return
         }
         
-        let westlakeGPA = (totalWestlakeGrades / Double(Information.classesAndGrades.count)).rounded()
+        let westlakeGPA = (totalWestlakeGrades / Double(Information.classesAndGrades.count) * 100.0).rounded() / 100.0
         westlakeGPALabel.text = "Westlake GPA: \(westlakeGPA)"
         
         let standardGPA = (totalStandardGrades / totalStandardCredit).rounded()
