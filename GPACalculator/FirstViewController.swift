@@ -21,6 +21,7 @@
  */
 
 import UIKit
+import CloudKit
 
 class FirstViewController: UIViewController, UITableViewDelegate {
 
@@ -30,9 +31,10 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if UserDefaults.standard.object(forKey: "savedList") != nil {
-            Information.classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[String: Any]]
+        guard let classesAndGrades = Information.keyValueStore.array(forKey: "savedList") as? [[String: Any]] else {
+            return
         }
+        Information.classesAndGrades = classesAndGrades
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,7 +56,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             Information.classesAndGrades.remove(at: indexPath.row)
-            UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
+            Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
             classTable.reloadData()
         }
     }

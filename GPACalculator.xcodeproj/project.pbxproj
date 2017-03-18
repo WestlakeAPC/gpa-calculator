@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17EF64501E7D9368004FBF41 /* GPACalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPACalculator.entitlements; sourceTree = "<group>"; };
 		73226DA31E78FA100067420D /* AddClassesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesController.swift; sourceTree = "<group>"; };
 		73226DAF1E7C97080067420D /* ClassSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassSelectorController.swift; path = ../ClassSelectorController.swift; sourceTree = "<group>"; };
 		73613FE31E78E7B1008A913A /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		7366FE231E22B41F003DF366 /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
+				17EF64501E7D9368004FBF41 /* GPACalculator.entitlements */,
 				7366FE241E22B41F003DF366 /* AppDelegate.swift */,
 				73613FE31E78E7B1008A913A /* Information.swift */,
 				7366FE261E22B41F003DF366 /* FirstViewController.swift */,
@@ -205,9 +207,14 @@
 				TargetAttributes = {
 					7366FE201E22B41F003DF366 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 9SR8L2XE3A;
+						DevelopmentTeam = M64HPXXUJF;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					7366FE361E22B41F003DF366 = {
 						CreatedOnToolsVersion = 8.1;
@@ -435,7 +442,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9SR8L2XE3A;
+				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = GPACalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.GPACalculator;
@@ -450,7 +458,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9SR8L2XE3A;
+				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = GPACalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.GPACalculator;

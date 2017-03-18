@@ -144,7 +144,7 @@ class AddClassesController: UIViewController {
         
         Information.classesAndGrades.append(["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits])
             
-        UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
+        Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
         
         classNameField.text = ""
         multiplierField.text = ""

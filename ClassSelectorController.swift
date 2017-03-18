@@ -193,7 +193,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         Information.classesAndGrades[selected] = ["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits]
         
-        UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
+        Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
         
         classNameField.text = ""
         multiplierField.text = ""

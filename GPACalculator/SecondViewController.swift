@@ -31,9 +31,10 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if UserDefaults.standard.object(forKey: "savedList") != nil {
-            Information.classesAndGrades = UserDefaults.standard.object(forKey: "savedList") as! [[String: Any]]
+        guard let classesAndGrades = Information.keyValueStore.array(forKey: "savedList") as? [[String: Any]] else {
+            return
         }
+        Information.classesAndGrades = classesAndGrades
         
         var totalWestlakeGrades = 0.0;
         var totalStandardCredit = 0.0;
