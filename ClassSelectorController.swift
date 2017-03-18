@@ -10,7 +10,7 @@ import UIKit
 
 class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var selected = 0;
+    var selected = 0
     
     @IBOutlet var classNameField: UITextField!
     @IBOutlet var multiplierField: UITextField!
@@ -39,6 +39,32 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         updatedLabel.isHidden = true
         doneButton.isEnabled = false
         cancelButton.isEnabled = true
+        
+        classNameField.text = Information.classesAndGrades[selected]["name"] as? String
+        currentGradeField.text = "\(Information.classesAndGrades[selected]["grade"] as! Int)"
+        
+        switch Information.classesAndGrades[selected]["multiplier"] as! Double {
+        case 1.0:
+            multiplierBar.selectedSegmentIndex = 0
+        case 1.1:
+            multiplierBar.selectedSegmentIndex = 1
+        case 1.2:
+            multiplierBar.selectedSegmentIndex = 2
+        default:
+            multiplierBar.selectedSegmentIndex = 3
+            multiplierField.text = "\(Information.classesAndGrades[selected]["multiplier"] as! Double)"
+        }
+        
+        switch Information.classesAndGrades[selected]["credits"] as! Double {
+        case 0.5:
+            creditsBar.selectedSegmentIndex = 0
+        case 1.0:
+            creditsBar.selectedSegmentIndex = 1
+        default:
+            creditsBar.selectedSegmentIndex = 2
+            creditsField.text = "\(Information.classesAndGrades[selected]["credits"] as! Double)"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
