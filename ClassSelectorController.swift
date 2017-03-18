@@ -159,7 +159,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
-        Information.classesAndGrades.append(["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits])
+        Information.classesAndGrades[selected] = ["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits]
         
         UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
         
