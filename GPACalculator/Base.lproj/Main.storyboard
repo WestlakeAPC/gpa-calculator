@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Your Classes" id="uqz-RK-MoC">
-                                        <barButtonItem key="leftBarButtonItem" title="Edit Classes" id="WUp-My-Vx5">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit Class" id="WUp-My-Vx5">
                                             <connections>
                                                 <segue destination="0ka-8a-8aj" kind="show" id="rks-hV-Dx1"/>
                                             </connections>
