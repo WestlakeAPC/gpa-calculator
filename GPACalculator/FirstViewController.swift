@@ -47,8 +47,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Information.classesAndGrades.count
     }
@@ -67,6 +65,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+// In an extension to suppress warnings.
 extension FirstViewController {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")

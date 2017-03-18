@@ -104,7 +104,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func updateClass(_ sender: Any) {
-        
         // Class name
         guard let className = classNameField.text else {
             warningLabel.isHidden = false
@@ -213,5 +212,4 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
 }
