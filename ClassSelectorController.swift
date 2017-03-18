@@ -207,4 +207,9 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         cancelButton.isEnabled = false
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
