@@ -71,7 +71,7 @@ extension FirstViewController {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = "\(Information.classesAndGrades[indexPath.row]["name"] as! String): \(Information.classesAndGrades[indexPath.row]["grade"] as! Int)"
+        cell.textLabel?.text = "\(Information.classesAndGrades[indexPath.row]["name"]!): \(Information.classesAndGrades[indexPath.row]["grade"]!)"
         
         return cell
     }
