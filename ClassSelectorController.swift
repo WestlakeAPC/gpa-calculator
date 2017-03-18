@@ -102,28 +102,26 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         var multiplier: Double = -1
         
         switch multiplierBar.selectedSegmentIndex {
-        case 0:
-            multiplier = 1
-        case 1:
-            multiplier = 1.1
-        case 2:
-            multiplier = 1.2
-        case 3:
-            fallthrough
-        default:
-            guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
-                warningLabel.isHidden = false
-                print("No multiplier specified.")
-                return
-            }
-            
-            // Can't use guard without let.
-            guard let _multiplier = Double(multiplierText) else {
-                warningLabel.isHidden = false
-                print("Malformed multiplier.")
-                return
-            }
-            multiplier = _multiplier
+            case 0:
+                multiplier = 1
+            case 1:
+                multiplier = 1.1
+            case 2:
+                multiplier = 1.2
+            default:
+                guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
+                    warningLabel.isHidden = false
+                    print("No multiplier specified.")
+                    return
+                }
+                
+                // Can't use guard without let.
+                guard let _multiplier = Double(multiplierText) else {
+                    warningLabel.isHidden = false
+                    print("Malformed multiplier.")
+                    return
+                }
+                multiplier = _multiplier
         }
         
         print(multiplier)
@@ -149,26 +147,24 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         var credits: Double = -1
         
         switch creditsBar.selectedSegmentIndex {
-        case 0:
-            credits = 0.5
-        case 1:
-            credits = 1.0
-        case 2:
-            fallthrough
-        default:
-            guard let creditsText = creditsField.text, !creditsText.isEmpty else {
-                warningLabel.isHidden = false
-                print("No credits specified.")
-                return
-            }
-            
-            // Can't use guard without let.
-            guard let _credits = Double(creditsText) else {
-                warningLabel.isHidden = false
-                print("Malformed credits.")
-                return
-            }
-            credits = _credits
+            case 0:
+                credits = 0.5
+            case 1:
+                credits = 1.0
+            default:
+                guard let creditsText = creditsField.text, !creditsText.isEmpty else {
+                    warningLabel.isHidden = false
+                    print("No credits specified.")
+                    return
+                }
+                
+                // Can't use guard without let.
+                guard let _credits = Double(creditsText) else {
+                    warningLabel.isHidden = false
+                    print("Malformed credits.")
+                    return
+                }
+                credits = _credits
         }
         
         print(credits)
@@ -187,6 +183,8 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         multiplierField.text = ""
         multiplierBar.selectedSegmentIndex = 0
         currentGradeField.text = ""
+        creditsField.text = ""
+        creditsBar.selectedSegmentIndex = 0
         
         warningLabel.isHidden = true
         updatedLabel.isHidden = false

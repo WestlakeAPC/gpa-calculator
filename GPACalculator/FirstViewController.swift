@@ -24,41 +24,33 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //Updates table
+        // Update table
         classTable.reloadData()
-        if(Information.classesAndGrades.count == 0){
+        if Information.classesAndGrades.count == 0 {
             editOption.isEnabled = false
         } else {
             editOption.isEnabled = true
         }
-        //print(classesAndGrades)
     }
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        //print("You have " + String(classesAndGrades.count) + " classes")
         return Information.classesAndGrades.count
-        
     }
     
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
-        
-        if editingStyle == UITableViewCellEditingStyle.delete{
+        if editingStyle == UITableViewCellEditingStyle.delete {
             Information.classesAndGrades.remove(at: indexPath.row)
             UserDefaults.standard.set(Information.classesAndGrades, forKey: "savedList")
             classTable.reloadData()
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
 extension FirstViewController {
