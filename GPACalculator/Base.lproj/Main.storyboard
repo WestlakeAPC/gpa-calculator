@@ -354,6 +354,7 @@
                                                 <segue destination="9pv-A4-QxB" kind="show" id="db2-tY-NFC"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Iwp-Bl-k9u"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -366,9 +367,12 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
                                 <rect key="frame" x="16" y="585" width="333" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="updateClass:" destination="0ka-8a-8aj" eventType="touchDown" id="tXg-8a-icc"/>
+                                </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-PC-6UV">
-                                <rect key="frame" x="16" y="91" width="375" height="216"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-PC-6UV">
+                                <rect key="frame" x="-5" y="91" width="375" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0ka-8a-8aj" id="3rf-On-sfD"/>
                                 </connections>
@@ -481,7 +485,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addClassButton" destination="m2e-h7-Sje" id="Hry-an-be4"/>
+                        <outlet property="cancelButton" destination="Uc9-vR-djH" id="XKU-4p-DM8"/>
+                        <outlet property="classNameField" destination="SNz-ld-VYY" id="VDi-gr-Usp"/>
+                        <outlet property="creditsBar" destination="kAX-TC-Ga4" id="e5D-xX-Bq2"/>
+                        <outlet property="creditsField" destination="aNi-Nd-dId" id="VDc-4o-r87"/>
+                        <outlet property="currentGradeField" destination="JhE-YF-lBy" id="34S-yF-q8f"/>
+                        <outlet property="doneButton" destination="Iwp-Bl-k9u" id="hHM-1T-qDl"/>
+                        <outlet property="multiplierBar" destination="WSd-GO-fCa" id="PeH-mu-tV0"/>
+                        <outlet property="multiplierField" destination="Fld-cv-XDb" id="kre-cq-shg"/>
                         <outlet property="picker" destination="FeU-PC-6UV" id="Nki-tn-m5z"/>
+                        <outlet property="updatedLabel" destination="Bpq-gZ-uRO" id="jqy-kt-OwG"/>
+                        <outlet property="warningLabel" destination="sOZ-6o-pTV" id="Wg6-aa-j83"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtn-ak-bWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
