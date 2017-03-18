@@ -138,6 +138,8 @@ class AddClassesController: UIViewController {
         multiplierField.text = ""
         multiplierBar.selectedSegmentIndex = 0
         currentGradeField.text = ""
+        creditsField.text = ""
+        creditsBar.selectedSegmentIndex = 0
         
         warningLabel.isHidden = true
         addedLabel.isHidden = false

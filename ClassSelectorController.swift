@@ -82,7 +82,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             case 1.0:
                 creditsBar.selectedSegmentIndex = 1
             default:
-                creditsBar.selectedSegmentIndex = 3
+                creditsBar.selectedSegmentIndex = 2
                 creditsField.text = "\(Information.classesAndGrades[selected]["credits"] as! Double)"
         }
     }
