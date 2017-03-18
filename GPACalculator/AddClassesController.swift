@@ -63,8 +63,6 @@ class AddClassesController: UIViewController {
                 multiplier = 1.1
             case 2:
                 multiplier = 1.2
-            case 3:
-                fallthrough
             default:
                 guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
                     warningLabel.isHidden = false
@@ -108,8 +106,6 @@ class AddClassesController: UIViewController {
                 credits = 0.5
             case 1:
                 credits = 1.0
-            case 2:
-                fallthrough
             default:
                 guard let creditsText = creditsField.text, !creditsText.isEmpty else {
                     warningLabel.isHidden = false
