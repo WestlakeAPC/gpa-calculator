@@ -82,7 +82,7 @@
                             <constraint firstAttribute="trailing" secondItem="2Z6-q5-ziU" secondAttribute="trailing" id="uQH-wN-0ez"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Edit Grades" image="second" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Edit Grades" image="ic_format_list_numbered_48pt" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="classTable" destination="Cyt-Be-raa" id="Taf-hv-P0l"/>
                         <outlet property="editOption" destination="WUp-My-Vx5" id="7lM-Rf-VMU"/>
@@ -139,7 +139,7 @@
                             <constraint firstAttribute="trailing" secondItem="NxY-WG-MHn" secondAttribute="trailing" id="OGm-SP-rzD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="GPA" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="GPA" image="ic_trending_up_48pt" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="letterGradeLabel" destination="nbz-T4-bf9" id="Pu0-2F-nWd"/>
                         <outlet property="standardGPALabel" destination="Byv-B4-NMV" id="8dJ-d0-aUs"/>
@@ -548,8 +548,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="ic_format_list_numbered_48pt" width="48" height="48"/>
+        <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yo3-WQ-76N"/>
