@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		17EF64501E7D9368004FBF41 /* GPACalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPACalculator.entitlements; sourceTree = "<group>"; };
 		73226DA31E78FA100067420D /* AddClassesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesController.swift; sourceTree = "<group>"; };
-		73226DAF1E7C97080067420D /* ClassSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassSelectorController.swift; path = ../ClassSelectorController.swift; sourceTree = "<group>"; };
+		73226DAF1E7C97080067420D /* ClassSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSelectorController.swift; sourceTree = "<group>"; };
 		73613FE31E78E7B1008A913A /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		7366FE211E22B41F003DF366 /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7366FE241E22B41F003DF366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
