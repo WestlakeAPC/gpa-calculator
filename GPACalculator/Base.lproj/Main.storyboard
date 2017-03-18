@@ -40,7 +40,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-Be-raa">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="fyX-oO-T1c">
@@ -57,16 +57,29 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="k1R-IQ-h9h"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete class by swiping the class item left." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-Oy-kbT">
+                                <rect key="frame" x="16" y="44" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2Z6-q5-ziU" secondAttribute="trailing" id="3Dp-2V-yS3"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="6dr-iQ-qTl"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="bottom" id="Pgt-SK-cTH"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="cCC-Ly-Bvb"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="e7J-SL-M9F"/>
-                            <constraint firstAttribute="trailing" secondItem="Cyt-Be-raa" secondAttribute="trailing" id="jGz-Gf-hpL"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Cyt-Be-raa" secondAttribute="bottom" id="pNf-DX-b8x"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="3pB-gC-PjZ"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="bottom" id="5OV-Ym-qUN"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="KLE-Yk-hlO"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="OzN-0P-ZA5"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="PRb-V0-78z"/>
+                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="Cyt-Be-raa" secondAttribute="leading" id="Vg3-O7-dsF"/>
+                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="WE8-V2-wdx"/>
+                            <constraint firstAttribute="trailing" secondItem="Cyt-Be-raa" secondAttribute="trailing" id="i8J-5Z-zUh"/>
+                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="trailing" secondItem="Cyt-Be-raa" secondAttribute="trailing" id="jW4-Qm-ZuE"/>
+                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="pGV-h3-XUN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cyt-Be-raa" secondAttribute="trailing" constant="-16" id="pNL-8I-jma"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Cyt-Be-raa" secondAttribute="bottom" id="q5b-Dv-aEH"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="top" secondItem="6bz-Oy-kbT" secondAttribute="bottom" constant="1" id="qbP-4z-fxz"/>
+                            <constraint firstAttribute="trailing" secondItem="2Z6-q5-ziU" secondAttribute="trailing" id="uQH-wN-0ez"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Edit Grades" image="second" id="acW-dT-cKf"/>
@@ -77,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-1"/>
+            <point key="canvasLocation" x="736.79999999999995" y="-1.3493253373313345"/>
         </scene>
         <!--GPA-->
         <scene sceneID="wg7-f3-ORb">
