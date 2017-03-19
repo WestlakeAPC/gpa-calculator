@@ -40,11 +40,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         // Update table
         classTable.reloadData()
-        if Information.classesAndGrades.count == 0 {
-            editOption.isEnabled = false
-        } else {
-            editOption.isEnabled = true
-        }
+        setEditOptionEnabled()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +51,17 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         if editingStyle == UITableViewCellEditingStyle.delete {
             Information.classesAndGrades.remove(at: indexPath.row)
             Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
+            
             classTable.reloadData()
+            setEditOptionEnabled()
+        }
+    }
+    
+    func setEditOptionEnabled() {
+        if Information.classesAndGrades.count == 0 {
+            editOption.isEnabled = false
+        } else {
+            editOption.isEnabled = true
         }
     }
 
