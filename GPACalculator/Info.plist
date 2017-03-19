@@ -30,8 +30,6 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -55,5 +53,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
