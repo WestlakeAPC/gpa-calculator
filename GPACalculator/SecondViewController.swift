@@ -52,7 +52,7 @@ class SecondViewController: UIViewController {
         }
         
         let westlakeGPA = (totalWestlakeGrades / Double(Information.classesAndGrades.count) * 100.0).rounded() / 100.0
-        westlakeGPALabel.text = "Westlake GPA: \(westlakeGPA)"
+        westlakeGPALabel.text = "\(westlakeGPA)"
         
         let standardGPA = (totalStandardGrades / totalStandardCredit).rounded()
         
@@ -108,8 +108,8 @@ class SecondViewController: UIViewController {
             return
         }
         
-        standardGPALabel.text = "4.0 Scale GPA: \(fourPointScale)"
-        letterGradeLabel.text = "Letter Grade: \(letter)"
+        standardGPALabel.text = "\(fourPointScale)"
+        letterGradeLabel.text = "\(letter)"
     }
     
     override func viewDidLoad() {
