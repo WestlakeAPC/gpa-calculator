@@ -108,7 +108,7 @@
                                     <navigationItem title="GPA" id="QUo-0D-HCk"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Material Design Icons used in this app's tab bar are graciously provided by Google." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hV7-DL-N7f">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Material Design Icons used in this app's tab bar are graciously provided by Google." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV7-DL-N7f">
                                 <rect key="frame" x="0.0" y="561" width="375" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
