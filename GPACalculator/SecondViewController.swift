@@ -28,8 +28,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var standardGPALabel: UILabel!
     @IBOutlet weak var letterGradeLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         Information.initialize()
         
         var totalWestlakeGrades = 0.0;
@@ -59,44 +59,44 @@ class SecondViewController: UIViewController {
         var fourPointScale: Double = -1
         var letter: String = ""
         switch (standardGPA) {
-            case 0..<65:
-                fourPointScale = 0
-                letter = "E/F"
-            case 65...66:
-                fourPointScale = 1
-                letter = "D"
-            case 67...69:
-                fourPointScale = 1.3
-                letter = "D+"
-            case 70...72:
-                fourPointScale = 1.7
-                letter = "C-"
-            case 73...76:
-                fourPointScale = 2.0
-                letter = "C"
-            case 77...79:
-                fourPointScale = 2.3
-                letter = "C+"
-            case 80...82:
-                fourPointScale = 2.7
-                letter = "B-"
-            case 83...86:
-                fourPointScale = 3.0
-                letter = "B"
-            case 87...89:
-                fourPointScale = 3.3
-                letter = "B+"
-            case 90...92:
-                fourPointScale = 3.7
-                letter = "A-"
-            case 93...96:
-                fourPointScale = 4.0
-                letter = "A"
-            case 97...100:
-                fourPointScale = 4.0
-                letter = "A+"
-            default:
-                break
+        case 0..<65:
+            fourPointScale = 0
+            letter = "E/F"
+        case 65...66:
+            fourPointScale = 1
+            letter = "D"
+        case 67...69:
+            fourPointScale = 1.3
+            letter = "D+"
+        case 70...72:
+            fourPointScale = 1.7
+            letter = "C-"
+        case 73...76:
+            fourPointScale = 2.0
+            letter = "C"
+        case 77...79:
+            fourPointScale = 2.3
+            letter = "C+"
+        case 80...82:
+            fourPointScale = 2.7
+            letter = "B-"
+        case 83...86:
+            fourPointScale = 3.0
+            letter = "B"
+        case 87...89:
+            fourPointScale = 3.3
+            letter = "B+"
+        case 90...92:
+            fourPointScale = 3.7
+            letter = "A-"
+        case 93...96:
+            fourPointScale = 4.0
+            letter = "A"
+        case 97...100:
+            fourPointScale = 4.0
+            letter = "A+"
+        default:
+            break
         }
         
         guard fourPointScale != -1, !letter.isEmpty else {
@@ -110,6 +110,10 @@ class SecondViewController: UIViewController {
         
         standardGPALabel.text = "4.0 Scale GPA: \(fourPointScale)"
         letterGradeLabel.text = "Letter Grade: \(letter)"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {

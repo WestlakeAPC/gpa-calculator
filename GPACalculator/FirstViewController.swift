@@ -33,7 +33,9 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         Information.initialize()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // Update table
         classTable.reloadData()
         setEditOptionEnabled()
