@@ -33,7 +33,7 @@ class Information: NSCoding {
     var credits: Double
     
     // Initialize
-    init(name: String, grade: Int, multiplier: Double, credits: Double) {
+    public init(name: String, grade: Int, multiplier: Double, credits: Double) {
         self.name = name
         self.grade = grade
         self.multiplier = multiplier
@@ -53,5 +53,13 @@ class Information: NSCoding {
         aCoder.encode(grade, forKey: "grade")
         aCoder.encode(multiplier, forKey: "multiplier")
         aCoder.encode(credits, forKey: "credits")
+    }
+    
+    public static func initialize() {
+        // Can't use guard without let.
+        guard let classesAndGrades = Information.keyValueStore.array(forKey: "savedList") as? [[String: Any]] else {
+            return
+        }
+        Information.classesAndGrades = classesAndGrades
     }
 }

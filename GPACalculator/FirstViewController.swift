@@ -30,11 +30,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        guard let classesAndGrades = Information.keyValueStore.array(forKey: "savedList") as? [[String: Any]] else {
-            return
-        }
-        Information.classesAndGrades = classesAndGrades
+        Information.initialize()
     }
     
     override func viewDidAppear(_ animated: Bool) {
