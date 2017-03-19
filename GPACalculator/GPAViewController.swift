@@ -22,7 +22,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class GPAViewController: UIViewController {
     
     @IBOutlet weak var westlakeGPALabel: UILabel!
     @IBOutlet weak var standardGPALabel: UILabel!
