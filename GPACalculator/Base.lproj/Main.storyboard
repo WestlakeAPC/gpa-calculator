@@ -109,7 +109,7 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Material Design Icons used in this app's tab bar are graciously provided by Google." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV7-DL-N7f">
-                                <rect key="frame" x="0.0" y="561" width="375" height="57"/>
+                                <rect key="frame" x="16" y="561" width="343" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="7h1-uG-qWY"/>
@@ -165,12 +165,12 @@
                             <constraint firstItem="tbr-3u-Pz3" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Bag-ej-71S"/>
                             <constraint firstItem="xps-FL-8Yb" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="D10-SQ-sRl"/>
                             <constraint firstItem="NxY-WG-MHn" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="FNy-Rg-pPb"/>
-                            <constraint firstAttribute="trailing" secondItem="hV7-DL-N7f" secondAttribute="trailing" id="KJA-6L-3sf"/>
+                            <constraint firstAttribute="trailing" secondItem="hV7-DL-N7f" secondAttribute="trailing" constant="16" id="KJA-6L-3sf"/>
                             <constraint firstItem="Byv-B4-NMV" firstAttribute="top" secondItem="xps-FL-8Yb" secondAttribute="bottom" constant="17" id="LmM-1H-u3A"/>
                             <constraint firstAttribute="trailing" secondItem="NxY-WG-MHn" secondAttribute="trailing" id="OGm-SP-rzD"/>
                             <constraint firstItem="tbr-3u-Pz3" firstAttribute="top" secondItem="NxY-WG-MHn" secondAttribute="bottom" constant="34" id="RcJ-bc-STH"/>
                             <constraint firstItem="jJJ-K1-1tY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="56" id="Yuw-QL-Ror"/>
-                            <constraint firstItem="hV7-DL-N7f" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="ZZs-G9-i7u"/>
+                            <constraint firstItem="hV7-DL-N7f" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="16" id="ZZs-G9-i7u"/>
                             <constraint firstItem="nbz-T4-bf9" firstAttribute="top" secondItem="aCt-U7-nPY" secondAttribute="bottom" constant="17" id="dH7-oX-sv9"/>
                             <constraint firstItem="xps-FL-8Yb" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="diT-8C-Gmw"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="hV7-DL-N7f" secondAttribute="bottom" id="gOd-kw-K45"/>
