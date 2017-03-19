@@ -23,7 +23,7 @@
 import UIKit
 import CloudKit
 
-class FirstViewController: UIViewController, UITableViewDelegate {
+class ClassListController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var classTable: UITableView!
     @IBOutlet var editOption: UIBarButtonItem!
@@ -70,7 +70,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
 }
 
 // In an extension to suppress warnings.
-extension FirstViewController {
+extension ClassListController {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
