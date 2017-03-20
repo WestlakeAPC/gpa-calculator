@@ -58,7 +58,7 @@ class Information: NSObject, NSCoding {
     public static func initializeArray() {
         // Can't use guard without let.
         guard let data = Information.keyValueStore.data(forKey: "savedList"),
-                let classesAndGrades = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Information] else {
+              let classesAndGrades = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Information] else {
             return
         }
         Information.classesAndGrades = classesAndGrades
