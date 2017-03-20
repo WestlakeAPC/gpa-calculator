@@ -54,7 +54,7 @@ class AddClassesController: UIViewController {
     
     @IBAction func addNewClass(_ sender: Any) {
         // Class name
-        guard let className = classNameField.text else {
+        guard let className = classNameField.text, !className.isEmpty else {
             warningLabel.isHidden = false
             print("No class name specified.")
             return

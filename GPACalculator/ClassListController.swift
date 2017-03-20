@@ -48,7 +48,7 @@ class ClassListController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             Information.classesAndGrades.remove(at: indexPath.row)
-            Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
+            Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
             
             classTable.reloadData()
             setEditOptionEnabled()
