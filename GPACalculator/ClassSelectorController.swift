@@ -112,8 +112,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
-        print(className)
-        
         // Multiplier
         var multiplier: Double = -1
         
@@ -140,8 +138,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
                 multiplier = _multiplier
         }
         
-        print(multiplier)
-        
         // Current grade
         var currentGrade = -1
         
@@ -156,8 +152,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         currentGrade = _currentGrade
-        
-        print(currentGrade)
         
         // Credits
         var credits: Double = -1
@@ -182,8 +176,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
                 }
                 credits = _credits
         }
-        
-        print(credits)
         
         // Add the class
         guard className != "", multiplier != -1, currentGrade != -1 else {

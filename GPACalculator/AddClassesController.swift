@@ -60,8 +60,6 @@ class AddClassesController: UIViewController {
             return
         }
         
-        print(className)
-        
         // Multiplier
         var multiplier: Double = -1
         
@@ -88,8 +86,6 @@ class AddClassesController: UIViewController {
                 multiplier = _multiplier
         }
         
-        print(multiplier)
-        
         // Current grade
         var currentGrade = -1
         
@@ -104,8 +100,6 @@ class AddClassesController: UIViewController {
             return
         }
         currentGrade = _currentGrade
-        
-        print(currentGrade)
         
         // Credits
         var credits: Double = -1
@@ -130,8 +124,6 @@ class AddClassesController: UIViewController {
                 }
                 credits = _credits
         }
-        
-        print(credits)
         
         // Add the class
         guard className != "", multiplier != -1, currentGrade != -1 else {
