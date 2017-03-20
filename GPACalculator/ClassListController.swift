@@ -45,16 +45,6 @@ class ClassListController: UIViewController, UITableViewDelegate {
         return Information.classesAndGrades.count
     }
     
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            Information.classesAndGrades.remove(at: indexPath.row)
-            Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
-            
-            classTable.reloadData()
-            setEditOptionEnabled()
-        }
-    }
-    
     func setEditOptionEnabled() {
         if Information.classesAndGrades.count == 0 {
             editOption.isEnabled = false
@@ -71,6 +61,16 @@ class ClassListController: UIViewController, UITableViewDelegate {
 
 // In an extension to suppress warnings.
 extension ClassListController {
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            Information.classesAndGrades.remove(at: indexPath.row)
+            Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
+            
+            classTable.reloadData()
+            setEditOptionEnabled()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
