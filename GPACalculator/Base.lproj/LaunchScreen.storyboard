@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="WestlakeAPC" translatesAutoresizingMaskIntoConstraints="NO" id="p4K-VH-RfE">
-                                <rect key="frame" x="45" y="-179" width="284" height="1024"/>
+                                <rect key="frame" x="45" y="191" width="284" height="284"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,8 +51,8 @@
                             <constraint firstItem="O3t-7f-eGy" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="KVl-gR-Kdc"/>
                             <constraint firstItem="6zK-je-bdu" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="64" id="Rio-ZM-v70"/>
                             <constraint firstItem="6zK-je-bdu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="UUI-Pv-rVz"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="p4K-VH-RfE" secondAttribute="bottom" constant="-178" id="VcP-th-lLI"/>
-                            <constraint firstItem="p4K-VH-RfE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-179" id="e5v-3S-at9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="p4K-VH-RfE" secondAttribute="bottom" constant="192" id="VcP-th-lLI"/>
+                            <constraint firstItem="p4K-VH-RfE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="191" id="e5v-3S-at9"/>
                             <constraint firstItem="O3t-7f-eGy" firstAttribute="top" secondItem="6zK-je-bdu" secondAttribute="bottom" constant="485.5" id="f00-hs-JII"/>
                             <constraint firstItem="f2a-ML-36j" firstAttribute="top" secondItem="O3t-7f-eGy" secondAttribute="bottom" id="hcc-MG-35M"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="f2a-ML-36j" secondAttribute="bottom" constant="33" id="mYo-vD-WeT"/>
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="33" y="518"/>
         </scene>
     </scenes>
     <resources>
