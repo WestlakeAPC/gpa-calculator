@@ -45,6 +45,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Information.initializeArray()
         
         picker.delegate = self
         picker.dataSource = self
@@ -63,7 +64,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Information.classesAndGrades[row]["name"] as? String
+        return Information.classesAndGrades[row].name
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -77,10 +78,10 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selected = row
         
-        classNameField.text = Information.classesAndGrades[selected]["name"] as? String
-        currentGradeField.text = "\(Information.classesAndGrades[selected]["grade"] as! Int)"
+        classNameField.text = Information.classesAndGrades[selected].name
+        currentGradeField.text = "\(Information.classesAndGrades[selected].grade)"
         
-        switch Information.classesAndGrades[selected]["multiplier"] as! Double {
+        switch Information.classesAndGrades[selected].multiplier {
             case 1.0:
                 multiplierBar.selectedSegmentIndex = 0
             case 1.1:
@@ -89,17 +90,17 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
                 multiplierBar.selectedSegmentIndex = 2
             default:
                 multiplierBar.selectedSegmentIndex = 3
-                multiplierField.text = "\(Information.classesAndGrades[selected]["multiplier"] as! Double)"
+                multiplierField.text = "\(Information.classesAndGrades[selected].multiplier)"
         }
         
-        switch Information.classesAndGrades[selected]["credits"] as! Double {
+        switch Information.classesAndGrades[selected].credits {
             case 0.5:
                 creditsBar.selectedSegmentIndex = 0
             case 1.0:
                 creditsBar.selectedSegmentIndex = 1
             default:
                 creditsBar.selectedSegmentIndex = 2
-                creditsField.text = "\(Information.classesAndGrades[selected]["credits"] as! Double)"
+                creditsField.text = "\(Information.classesAndGrades[selected].credits)"
         }
     }
     
@@ -190,9 +191,9 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
-        Information.classesAndGrades[selected] = ["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits]
+        Information.classesAndGrades[selected] = Information(className, grade: currentGrade, multiplier: multiplier, credits: credits)
         
-        Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
+        Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
         
         classNameField.text = ""
         multiplierField.text = ""

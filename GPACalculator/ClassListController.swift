@@ -30,7 +30,7 @@ class ClassListController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Information.initialize()
+        Information.initializeArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +74,7 @@ extension ClassListController {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = "\(Information.classesAndGrades[indexPath.row]["name"]!): \(Information.classesAndGrades[indexPath.row]["grade"]!)"
+        cell.textLabel?.text = "\(Information.classesAndGrades[indexPath.row].name): \(Information.classesAndGrades[indexPath.row].grade)"
         
         return cell
     }

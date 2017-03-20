@@ -139,9 +139,9 @@ class AddClassesController: UIViewController {
             return
         }
         
-        Information.classesAndGrades.append(["name": className, "multiplier": multiplier, "grade": currentGrade, "credits": credits])
-            
-        Information.keyValueStore.set(Information.classesAndGrades, forKey: "savedList")
+        Information.classesAndGrades.append(Information(className, grade: currentGrade, multiplier: multiplier, credits: credits))
+        
+        Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
         
         classNameField.text = ""
         multiplierField.text = ""

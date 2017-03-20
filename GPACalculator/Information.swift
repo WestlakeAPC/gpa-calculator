@@ -22,9 +22,9 @@
 
 import Foundation
 
-class Information: NSCoding {
+class Information: NSObject, NSCoding {
     
-    static var classesAndGrades = [[String: Any]]()
+    static var classesAndGrades = [Information]()
     static var keyValueStore = NSUbiquitousKeyValueStore()
     
     var name: String
@@ -33,7 +33,7 @@ class Information: NSCoding {
     var credits: Double
     
     // Initialize
-    public init(name: String, grade: Int, multiplier: Double, credits: Double) {
+    public init(_ name: String, grade: Int, multiplier: Double, credits: Double) {
         self.name = name
         self.grade = grade
         self.multiplier = multiplier
@@ -45,7 +45,7 @@ class Information: NSCoding {
         let grade = aDecoder.decodeInteger(forKey: "grade")
         let multiplier = aDecoder.decodeDouble(forKey: "multiplier")
         let credits = aDecoder.decodeDouble(forKey: "credits")
-        self.init(name: name, grade: grade, multiplier: multiplier, credits: credits)
+        self.init(name, grade: grade, multiplier: multiplier, credits: credits)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -55,9 +55,10 @@ class Information: NSCoding {
         aCoder.encode(credits, forKey: "credits")
     }
     
-    public static func initialize() {
+    public static func initializeArray() {
         // Can't use guard without let.
-        guard let classesAndGrades = Information.keyValueStore.array(forKey: "savedList") as? [[String: Any]] else {
+        guard let data = Information.keyValueStore.data(forKey: "savedList"),
+                let classesAndGrades = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Information] else {
             return
         }
         Information.classesAndGrades = classesAndGrades

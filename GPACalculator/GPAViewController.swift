@@ -30,16 +30,16 @@ class GPAViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Information.initialize()
+        Information.initializeArray()
         
         var totalWestlakeGrades = 0.0;
         var totalStandardCredit = 0.0;
         var totalStandardGrades = 0.0;
         
         for classAndGrade in Information.classesAndGrades {
-            totalWestlakeGrades += (classAndGrade["grade"] as! Double) * (classAndGrade["multiplier"] as! Double)
-            totalStandardGrades += (classAndGrade["grade"] as! Double) * (classAndGrade["credits"] as! Double)
-            totalStandardCredit += classAndGrade["credits"] as! Double
+            totalWestlakeGrades += Double(classAndGrade.grade) * classAndGrade.multiplier
+            totalStandardGrades += Double(classAndGrade.grade) * classAndGrade.credits
+            totalStandardCredit += classAndGrade.credits
         }
         
         guard totalStandardCredit != 0, Information.classesAndGrades.count != 0 else {
