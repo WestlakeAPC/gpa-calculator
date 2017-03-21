@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Westlake GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zK-je-bdu">
-                                <rect key="frame" x="16" y="84" width="343" height="21"/>
+                                <rect key="frame" x="16" y="84" width="343" height="33.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +53,6 @@
                             <constraint firstItem="6zK-je-bdu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="UUI-Pv-rVz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="p4K-VH-RfE" secondAttribute="bottom" constant="192" id="VcP-th-lLI"/>
                             <constraint firstItem="p4K-VH-RfE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="191" id="e5v-3S-at9"/>
-                            <constraint firstItem="O3t-7f-eGy" firstAttribute="top" secondItem="6zK-je-bdu" secondAttribute="bottom" constant="485.5" id="f00-hs-JII"/>
                             <constraint firstItem="f2a-ML-36j" firstAttribute="top" secondItem="O3t-7f-eGy" secondAttribute="bottom" id="hcc-MG-35M"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="f2a-ML-36j" secondAttribute="bottom" constant="33" id="mYo-vD-WeT"/>
                             <constraint firstItem="p4K-VH-RfE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="29" id="xkv-O2-EH0"/>
