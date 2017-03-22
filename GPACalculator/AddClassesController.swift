@@ -123,13 +123,7 @@ class AddClassesController: UIViewController {
         }
         
         // Add the class
-        guard className != "", multiplier != -1, currentGrade != -1 else {
-            warningLabel.isHidden = false
-            return
-        }
-        
         Information.classesAndGrades.append(Information(className, grade: currentGrade, multiplier: multiplier, credits: credits))
-        
         Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
         
         classNameField.text = ""

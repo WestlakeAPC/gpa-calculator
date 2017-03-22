@@ -139,19 +139,16 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         // Current grade
-        var currentGrade = -1
-        
         guard let currentGradeText = currentGradeField.text, !currentGradeText.isEmpty else {
             warningLabel.isHidden = false
             print("No current grade specified.")
             return
         }
-        guard let _currentGrade = Int(currentGradeText) else {
+        guard let currentGrade = Int(currentGradeText) else {
             warningLabel.isHidden = false
             print("Malformed current grade.")
             return
         }
-        currentGrade = _currentGrade
         
         // Credits
         var credits: Double = -1
@@ -178,13 +175,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         // Add the class
-        guard className != "", multiplier != -1, currentGrade != -1 else {
-            warningLabel.isHidden = false
-            return
-        }
-        
         Information.classesAndGrades[selected] = Information(className, grade: currentGrade, multiplier: multiplier, credits: credits)
-        
         Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
         
         classNameField.text = ""
