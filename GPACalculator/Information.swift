@@ -41,7 +41,7 @@ class Information: NSObject, NSCoding {
     }
 
     public required convenience init?(coder aDecoder: NSCoder) {
-        let name = aDecoder.decodeObject(forKey: "name") as! String
+        let name: String = aDecoder.decodeObject(forKey: "name") as? String ?? "Classy McClassFace"
         let grade = aDecoder.decodeInteger(forKey: "grade")
         let multiplier = aDecoder.decodeDouble(forKey: "multiplier")
         let credits = aDecoder.decodeDouble(forKey: "credits")
