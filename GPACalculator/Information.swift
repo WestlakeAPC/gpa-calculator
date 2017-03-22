@@ -25,7 +25,7 @@ import Foundation
 class Information: NSObject, NSCoding {
     
     static var classesAndGrades = [Information]()
-    static var keyValueStore = NSUbiquitousKeyValueStore()
+    static let keyValueStore = NSUbiquitousKeyValueStore()
     
     var name: String
     var grade: Int

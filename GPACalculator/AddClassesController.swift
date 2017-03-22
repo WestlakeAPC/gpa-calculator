@@ -87,19 +87,16 @@ class AddClassesController: UIViewController {
         }
         
         // Current grade
-        var currentGrade = -1
-        
         guard let currentGradeText = currentGradeField.text, !currentGradeText.isEmpty else {
             warningLabel.isHidden = false
             print("No current grade specified.")
             return
         }
-        guard let _currentGrade = Int(currentGradeText) else {
+        guard let currentGrade = Int(currentGradeText) else {
             warningLabel.isHidden = false
             print("Malformed current grade.")
             return
         }
-        currentGrade = _currentGrade
         
         // Credits
         var credits: Double = -1
