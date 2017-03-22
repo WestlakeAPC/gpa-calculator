@@ -24,9 +24,9 @@ import UIKit
 
 class GPAViewController: UIViewController {
     
-    @IBOutlet weak var westlakeGPALabel: UILabel!
-    @IBOutlet weak var standardGPALabel: UILabel!
-    @IBOutlet weak var letterGradeLabel: UILabel!
+    @IBOutlet var westlakeGPALabel: UILabel!
+    @IBOutlet var standardGPALabel: UILabel!
+    @IBOutlet var letterGradeLabel: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
