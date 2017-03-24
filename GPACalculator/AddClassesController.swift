@@ -138,7 +138,6 @@ class AddClassesController: UIViewController {
         addClassButton.isHidden = true
         doneButton.isEnabled = true
         cancelButton.isEnabled = false
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

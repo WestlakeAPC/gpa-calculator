@@ -60,63 +60,63 @@ class GPAViewController: UIViewController {
         var letter: String = ""
         switch (standardGPA) {
             case 0..<65:
-                standardGPALabel.textColor = UIColor.black
-                letterGradeLabel.textColor = UIColor.black
+                standardGPALabel.textColor = .black
+                letterGradeLabel.textColor = .black
                 fourPointScale = 0
                 letter = "E/F"
             case 65...66:
-                standardGPALabel.textColor = UIColor.red
-                letterGradeLabel.textColor = UIColor.red
+                standardGPALabel.textColor = .red
+                letterGradeLabel.textColor = .red
                 fourPointScale = 1
                 letter = "D"
             case 67...69:
-                standardGPALabel.textColor = UIColor.red
-                letterGradeLabel.textColor = UIColor.red
+                standardGPALabel.textColor = .red
+                letterGradeLabel.textColor = .red
                 fourPointScale = 1.3
                 letter = "D+"
             case 70...72:
-                standardGPALabel.textColor = UIColor.orange
-                letterGradeLabel.textColor = UIColor.orange
+                standardGPALabel.textColor = .orange
+                letterGradeLabel.textColor = .orange
                 fourPointScale = 1.7
                 letter = "C-"
             case 73...76:
-                standardGPALabel.textColor = UIColor.orange
-                letterGradeLabel.textColor = UIColor.orange
+                standardGPALabel.textColor = .orange
+                letterGradeLabel.textColor = .orange
                 fourPointScale = 2.0
                 letter = "C"
             case 77...79:
-                standardGPALabel.textColor = UIColor.orange
-                letterGradeLabel.textColor = UIColor.orange
+                standardGPALabel.textColor = .orange
+                letterGradeLabel.textColor = .orange
                 fourPointScale = 2.3
                 letter = "C+"
             case 80...82:
-                standardGPALabel.textColor = UIColor.yellow
-                letterGradeLabel.textColor = UIColor.yellow
+                standardGPALabel.textColor = .yellow
+                letterGradeLabel.textColor = .yellow
                 fourPointScale = 2.7
                 letter = "B-"
             case 83...86:
-                standardGPALabel.textColor = UIColor.yellow
-                letterGradeLabel.textColor = UIColor.yellow
+                standardGPALabel.textColor = .yellow
+                letterGradeLabel.textColor = .yellow
                 fourPointScale = 3.0
                 letter = "B"
             case 87...89:
-                standardGPALabel.textColor = UIColor.yellow
-                letterGradeLabel.textColor = UIColor.yellow
+                standardGPALabel.textColor = .yellow
+                letterGradeLabel.textColor = .yellow
                 fourPointScale = 3.3
                 letter = "B+"
             case 90...92:
-                standardGPALabel.textColor = UIColor.green
-                letterGradeLabel.textColor = UIColor.green
+                standardGPALabel.textColor = .green
+                letterGradeLabel.textColor = .green
                 fourPointScale = 3.7
                 letter = "A-"
             case 93...96:
-                standardGPALabel.textColor = UIColor.green
-                letterGradeLabel.textColor = UIColor.green
+                standardGPALabel.textColor = .green
+                letterGradeLabel.textColor = .green
                 fourPointScale = 4.0
                 letter = "A"
             case 97...100:
-                standardGPALabel.textColor = UIColor.green
-                letterGradeLabel.textColor = UIColor.green
+                standardGPALabel.textColor = .green
+                letterGradeLabel.textColor = .green
                 fourPointScale = 4.0
                 letter = "A+"
             default:

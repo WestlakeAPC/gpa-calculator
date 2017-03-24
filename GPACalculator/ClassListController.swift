@@ -62,7 +62,7 @@ class ClassListController: UIViewController, UITableViewDelegate {
 // In an extension to suppress warnings.
 extension ClassListController {
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+        if editingStyle == .delete {
             Information.classesAndGrades.remove(at: indexPath.row)
             Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: Information.classesAndGrades), forKey: "savedList")
             

@@ -190,7 +190,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         addClassButton.isHidden = true
         doneButton.isEnabled = true
         cancelButton.isEnabled = false
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
