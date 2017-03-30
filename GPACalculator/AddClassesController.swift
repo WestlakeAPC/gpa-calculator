@@ -132,10 +132,9 @@ class AddClassesController: UIViewController {
         warningLabel.isHidden = true
         cancelButton.isEnabled = false
         
-        DispatchQueue.global(qos: .background).async {
-            DispatchQueue.main.async {
-                self.view.endEditing(true)
-            }
+        // Let button animation finish.
+        DispatchQueue.main.async {
+            self.view.endEditing(true)
             
             usleep(10000)
             self.performSegue(withIdentifier: "ExitAddClassSegue", sender: self)
