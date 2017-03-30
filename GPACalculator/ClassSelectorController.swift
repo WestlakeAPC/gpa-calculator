@@ -35,8 +35,8 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var creditsBar: UISegmentedControl!
     
     @IBOutlet var warningLabel: UILabel!
-    @IBOutlet var addClassButton: UIButton!
     
+    @IBOutlet var addClassButton: UIButton!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
     @IBOutlet var picker: UIPickerView!

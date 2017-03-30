@@ -33,8 +33,8 @@ class AddClassesController: UIViewController {
     @IBOutlet var creditsBar: UISegmentedControl!
     
     @IBOutlet var warningLabel: UILabel!
-    @IBOutlet var addClassButton: UIButton!
     
+    @IBOutlet var addClassButton: UIButton!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
