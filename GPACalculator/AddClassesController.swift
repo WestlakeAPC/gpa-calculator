@@ -133,7 +133,11 @@ class AddClassesController: UIViewController {
         cancelButton.isEnabled = false
         
         DispatchQueue.global(qos: .background).async {
-            usleep(25000)
+            DispatchQueue.main.async {
+                self.view.endEditing(true)
+            }
+            
+            usleep(10000)
             self.performSegue(withIdentifier: "ExitAddClassSegue", sender: self)
         }
     }
