@@ -35,10 +35,8 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var creditsBar: UISegmentedControl!
     
     @IBOutlet var warningLabel: UILabel!
-    @IBOutlet var updatedLabel: UILabel!
     @IBOutlet var addClassButton: UIButton!
     
-    @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
     @IBOutlet var picker: UIPickerView!
@@ -51,8 +49,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         picker.dataSource = self
         
         warningLabel.isHidden = true
-        updatedLabel.isHidden = true
-        doneButton.isEnabled = false
         cancelButton.isEnabled = true
         
         pickerView(picker, didSelectRow: 0, inComponent: 0)
@@ -186,10 +182,12 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         creditsBar.selectedSegmentIndex = 0
         
         warningLabel.isHidden = true
-        updatedLabel.isHidden = false
-        addClassButton.isHidden = true
-        doneButton.isEnabled = true
         cancelButton.isEnabled = false
+        
+        DispatchQueue.global(qos: .background).async {
+            usleep(25000)
+            self.performSegue(withIdentifier: "ExitSelectorSegue", sender: self)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

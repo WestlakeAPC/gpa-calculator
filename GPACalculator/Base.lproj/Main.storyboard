@@ -233,11 +233,6 @@
                                                 <segue destination="49e-Tb-3d3" kind="show" id="Cfz-jl-bOm"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="U7b-Gc-JRW">
-                                            <connections>
-                                                <segue destination="49e-Tb-3d3" kind="show" id="fVC-Jc-FY2"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -319,16 +314,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Added" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-GU-5ry">
-                                <rect key="frame" x="48" y="485" width="274" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="tOU-GU-5ry" secondAttribute="trailing" constant="37" id="36D-nK-edG"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="3an-TB-AQO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q0n-e4-w3G" secondAttribute="trailing" constant="181" id="3pG-cf-TKN"/>
                             <constraint firstItem="kzn-pw-oIf" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="5mu-hg-0O1"/>
@@ -353,9 +341,7 @@
                             <constraint firstItem="aVm-Mm-MB3" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="bZR-Ws-1rJ"/>
                             <constraint firstItem="k8X-Rz-gNc" firstAttribute="top" secondItem="Q0n-e4-w3G" secondAttribute="bottom" constant="8" id="cF9-vV-75d"/>
                             <constraint firstItem="kzn-pw-oIf" firstAttribute="top" secondItem="aVz-72-2dD" secondAttribute="bottom" constant="8" id="d5k-ps-enO"/>
-                            <constraint firstItem="tOU-GU-5ry" firstAttribute="top" secondItem="U6p-cP-Jaa" secondAttribute="bottom" constant="8" id="dxK-yb-vJe"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="ey6-I0-wEj"/>
-                            <constraint firstItem="tOU-GU-5ry" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" constant="32" id="iHb-vG-fYR"/>
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="leading" secondItem="36Y-JH-cmb" secondAttribute="trailing" constant="8" id="k6r-bT-wD6"/>
                             <constraint firstItem="aVz-72-2dD" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="kbJ-yZ-0EL"/>
                             <constraint firstItem="tvo-zN-BFK" firstAttribute="top" secondItem="XOU-yn-1g9" secondAttribute="bottom" constant="8" id="nsb-NA-54x"/>
@@ -373,16 +359,15 @@
                     <navigationItem key="navigationItem" id="HgI-dL-7Hh"/>
                     <connections>
                         <outlet property="addClassButton" destination="Zmi-o9-6B8" id="IKQ-wT-ejA"/>
-                        <outlet property="addedLabel" destination="tOU-GU-5ry" id="mux-EY-sfR"/>
                         <outlet property="cancelButton" destination="pZF-Ly-hsJ" id="sIq-yM-pbG"/>
                         <outlet property="classNameField" destination="tvo-zN-BFK" id="ONZ-4Z-2pu"/>
                         <outlet property="creditsBar" destination="36Y-JH-cmb" id="9yT-tR-2p9"/>
                         <outlet property="creditsField" destination="Fpg-aH-Bxd" id="hFa-88-kBC"/>
                         <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
-                        <outlet property="doneButton" destination="U7b-Gc-JRW" id="53t-rk-oCo"/>
                         <outlet property="multiplierBar" destination="aVm-Mm-MB3" id="Glh-ZN-3aU"/>
                         <outlet property="multiplierField" destination="kzn-pw-oIf" id="gh5-Uo-mmS"/>
                         <outlet property="warningLabel" destination="U6p-cP-Jaa" id="eyz-pL-vKy"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="ExitAddClassSegue" id="nA5-ux-Lxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNA-Rz-CiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -408,11 +393,6 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uc9-vR-djH">
                                             <connections>
                                                 <segue destination="49e-Tb-3d3" kind="show" id="WqY-Yd-5Ws"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Iwp-Bl-k9u">
-                                            <connections>
-                                                <segue destination="49e-Tb-3d3" kind="show" id="yo3-WQ-76N"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -511,12 +491,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Updated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpq-gZ-uRO">
-                                <rect key="frame" x="49" y="536" width="274" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -545,7 +519,6 @@
                             <constraint firstItem="pEY-Yu-Mol" firstAttribute="top" secondItem="5tl-yN-EGX" secondAttribute="top" id="YFM-Gm-oWG"/>
                             <constraint firstItem="WSd-GO-fCa" firstAttribute="top" secondItem="dB6-9i-k0S" secondAttribute="bottom" constant="9" id="Ydt-kp-dth"/>
                             <constraint firstItem="Fld-cv-XDb" firstAttribute="top" secondItem="dB6-9i-k0S" secondAttribute="bottom" constant="8" id="ZRf-nG-0Kn"/>
-                            <constraint firstItem="Bpq-gZ-uRO" firstAttribute="top" secondItem="sOZ-6o-pTV" secondAttribute="bottom" constant="13" id="ZeT-xe-bIO"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="trailing" secondItem="pEY-Yu-Mol" secondAttribute="trailing" id="a9G-HM-0kA"/>
                             <constraint firstItem="sOZ-6o-pTV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-1" id="cnJ-xW-yyv"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="top" secondItem="5tl-yN-EGX" secondAttribute="top" constant="91" id="cwc-lb-jaS"/>
@@ -557,9 +530,7 @@
                             <constraint firstItem="SNz-ld-VYY" firstAttribute="top" secondItem="EMd-4d-VZq" secondAttribute="bottom" constant="8" id="j50-QU-w1V"/>
                             <constraint firstItem="dB6-9i-k0S" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-1" id="jav-NN-cTN"/>
                             <constraint firstItem="WSd-GO-fCa" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-1" id="jlA-gx-Orn"/>
-                            <constraint firstItem="Bpq-gZ-uRO" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="33" id="kCs-4O-7wm"/>
                             <constraint firstItem="d7M-1B-pBC" firstAttribute="top" secondItem="pEY-Yu-Mol" secondAttribute="bottom" constant="18" id="lcb-qh-guS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bpq-gZ-uRO" secondAttribute="trailing" constant="36" id="n7S-bV-4YX"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="top" secondItem="d7M-1B-pBC" secondAttribute="bottom" constant="8" id="nDs-nu-mLy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOZ-6o-pTV" secondAttribute="trailing" constant="16" id="nly-Rg-xfb"/>
                             <constraint firstItem="EMd-4d-VZq" firstAttribute="top" secondItem="FeU-PC-6UV" secondAttribute="bottom" constant="8" id="oJe-6G-HJo"/>
@@ -577,12 +548,11 @@
                         <outlet property="creditsBar" destination="kAX-TC-Ga4" id="e5D-xX-Bq2"/>
                         <outlet property="creditsField" destination="aNi-Nd-dId" id="VDc-4o-r87"/>
                         <outlet property="currentGradeField" destination="JhE-YF-lBy" id="34S-yF-q8f"/>
-                        <outlet property="doneButton" destination="Iwp-Bl-k9u" id="hHM-1T-qDl"/>
                         <outlet property="multiplierBar" destination="WSd-GO-fCa" id="PeH-mu-tV0"/>
                         <outlet property="multiplierField" destination="Fld-cv-XDb" id="kre-cq-shg"/>
                         <outlet property="picker" destination="FeU-PC-6UV" id="Nki-tn-m5z"/>
-                        <outlet property="updatedLabel" destination="Bpq-gZ-uRO" id="jqy-kt-OwG"/>
                         <outlet property="warningLabel" destination="sOZ-6o-pTV" id="Wg6-aa-j83"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="ExitSelectorSegue" id="EAx-Cm-4wL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtn-ak-bWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -595,6 +565,6 @@
         <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yo3-WQ-76N"/>
+        <segue reference="EAx-Cm-4wL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -33,17 +33,13 @@ class AddClassesController: UIViewController {
     @IBOutlet var creditsBar: UISegmentedControl!
     
     @IBOutlet var warningLabel: UILabel!
-    @IBOutlet var addedLabel: UILabel!
     @IBOutlet var addClassButton: UIButton!
     
-    @IBOutlet var doneButton: UIBarButtonItem!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         warningLabel.isHidden = true
-        addedLabel.isHidden = true
-        doneButton.isEnabled = false
         cancelButton.isEnabled = true
     }
     
@@ -134,10 +130,12 @@ class AddClassesController: UIViewController {
         creditsBar.selectedSegmentIndex = 0
         
         warningLabel.isHidden = true
-        addedLabel.isHidden = false
-        addClassButton.isHidden = true
-        doneButton.isEnabled = true
         cancelButton.isEnabled = false
+        
+        DispatchQueue.global(qos: .background).async {
+            usleep(25000)
+            self.performSegue(withIdentifier: "ExitAddClassSegue", sender: self)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
