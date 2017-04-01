@@ -80,10 +80,13 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         switch Information.classesAndGrades[selected].multiplier {
             case 1.0:
                 multiplierBar.selectedSegmentIndex = 0
+                multiplierField.text = ""
             case 1.1:
                 multiplierBar.selectedSegmentIndex = 1
+                multiplierField.text = ""
             case 1.2:
                 multiplierBar.selectedSegmentIndex = 2
+                multiplierField.text = ""
             default:
                 multiplierBar.selectedSegmentIndex = 3
                 multiplierField.text = "\(Information.classesAndGrades[selected].multiplier)"
@@ -92,8 +95,10 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         switch Information.classesAndGrades[selected].credits {
             case 0.5:
                 creditsBar.selectedSegmentIndex = 0
+                creditsField.text = ""
             case 1.0:
                 creditsBar.selectedSegmentIndex = 1
+                creditsField.text = ""
             default:
                 creditsBar.selectedSegmentIndex = 2
                 creditsField.text = "\(Information.classesAndGrades[selected].credits)"
