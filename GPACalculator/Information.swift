@@ -26,6 +26,7 @@ class Information: NSObject, NSCoding {
     
     static var classesAndGrades = [Information]()
     static let keyValueStore = NSUbiquitousKeyValueStore()
+    static var selectedRow: Int = 0
     
     var name: String
     var grade: Int

@@ -35,6 +35,7 @@ class ClassListController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        Information.selectedRow = 0
         
         // Update table
         classTable.reloadData()
@@ -69,6 +70,10 @@ extension ClassListController {
             classTable.reloadData()
             setEditOptionEnabled()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Information.selectedRow = indexPath.row
     }
     
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {

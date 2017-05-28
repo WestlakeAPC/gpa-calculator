@@ -51,7 +51,15 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         warningLabel.isHidden = true
         cancelButton.isEnabled = true
         
-        pickerView(picker, didSelectRow: 0, inComponent: 0)
+        picker.selectRow(Information.selectedRow, inComponent: 0, animated: false)
+        pickerView(picker, didSelectRow: Information.selectedRow, inComponent: 0)
+        
+        classNameField.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.editingChanged)
+        multiplierField.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.editingChanged)
+        multiplierBar.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.valueChanged)
+        currentGradeField.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.editingChanged)
+        creditsField.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.editingChanged)
+        creditsBar.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -200,5 +208,10 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func disablePicker() {
+        picker.isUserInteractionEnabled = false
+        picker.backgroundColor = .red
     }
 }
