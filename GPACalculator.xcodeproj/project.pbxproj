@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B63E2DE3E3C3BDC1ABC9395 /* Pods_GPACalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F1C1B859B61B039716FA0B /* Pods_GPACalculatorUITests.framework */; };
 		73226DA41E78FA100067420D /* AddClassesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226DA31E78FA100067420D /* AddClassesController.swift */; };
 		73226DB01E7C97080067420D /* ClassSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73226DAF1E7C97080067420D /* ClassSelectorController.swift */; };
 		73613FE41E78E7B1008A913A /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73613FE31E78E7B1008A913A /* Information.swift */; };
@@ -18,6 +19,8 @@
 		7366FE311E22B41F003DF366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7366FE2F1E22B41F003DF366 /* LaunchScreen.storyboard */; };
 		7366FE3C1E22B41F003DF366 /* GPACalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE3B1E22B41F003DF366 /* GPACalculatorTests.swift */; };
 		7366FE471E22B41F003DF366 /* GPACalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366FE461E22B41F003DF366 /* GPACalculatorUITests.swift */; };
+		C0CAC4C000E97FFBF5B06CDB /* Pods_GPACalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CB1138FEE8F0FB4AF6483A /* Pods_GPACalculator.framework */; };
+		D1599C31B3390C3A1F3E1148 /* Pods_GPACalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DB86081B2512AEF125033D /* Pods_GPACalculatorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		17EF64501E7D9368004FBF41 /* GPACalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPACalculator.entitlements; sourceTree = "<group>"; };
+		36E1AA7CD1A0820F58345713 /* Pods-GPACalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPACalculatorTests/Pods-GPACalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		378D9D55728BCBA57CED2637 /* Pods-GPACalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPACalculatorTests/Pods-GPACalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38F1C1B859B61B039716FA0B /* Pods_GPACalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73226DA31E78FA100067420D /* AddClassesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesController.swift; sourceTree = "<group>"; };
 		73226DAF1E7C97080067420D /* ClassSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassSelectorController.swift; sourceTree = "<group>"; };
 		73613FE31E78E7B1008A913A /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
@@ -56,6 +62,12 @@
 		7366FE421E22B41F003DF366 /* GPACalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPACalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7366FE461E22B41F003DF366 /* GPACalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorUITests.swift; sourceTree = "<group>"; };
 		7366FE481E22B41F003DF366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76CB1138FEE8F0FB4AF6483A /* Pods_GPACalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93703C42C90E08174F4415D8 /* Pods-GPACalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPACalculatorUITests/Pods-GPACalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		974046953732B117CDC8D35B /* Pods-GPACalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPACalculator/Pods-GPACalculator.release.xcconfig"; sourceTree = "<group>"; };
+		9E3C589F5350BAB28915A085 /* Pods-GPACalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPACalculatorUITests/Pods-GPACalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7DB86081B2512AEF125033D /* Pods_GPACalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6032B19D9468E5585D8DD4F /* Pods-GPACalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPACalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPACalculator/Pods-GPACalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CAC4C000E97FFBF5B06CDB /* Pods_GPACalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1599C31B3390C3A1F3E1148 /* Pods_GPACalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +91,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B63E2DE3E3C3BDC1ABC9395 /* Pods_GPACalculatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C9A779CE1D095145569722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6032B19D9468E5585D8DD4F /* Pods-GPACalculator.debug.xcconfig */,
+				974046953732B117CDC8D35B /* Pods-GPACalculator.release.xcconfig */,
+				378D9D55728BCBA57CED2637 /* Pods-GPACalculatorTests.debug.xcconfig */,
+				36E1AA7CD1A0820F58345713 /* Pods-GPACalculatorTests.release.xcconfig */,
+				9E3C589F5350BAB28915A085 /* Pods-GPACalculatorUITests.debug.xcconfig */,
+				93703C42C90E08174F4415D8 /* Pods-GPACalculatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		344226D900AA1BE9CC3062FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76CB1138FEE8F0FB4AF6483A /* Pods_GPACalculator.framework */,
+				B7DB86081B2512AEF125033D /* Pods_GPACalculatorTests.framework */,
+				38F1C1B859B61B039716FA0B /* Pods_GPACalculatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7366FE181E22B41F003DF366 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +128,8 @@
 				7366FE3A1E22B41F003DF366 /* GPACalculatorTests */,
 				7366FE451E22B41F003DF366 /* GPACalculatorUITests */,
 				7366FE221E22B41F003DF366 /* Products */,
+				03C9A779CE1D095145569722 /* Pods */,
+				344226D900AA1BE9CC3062FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7366FE4B1E22B41F003DF366 /* Build configuration list for PBXNativeTarget "GPACalculator" */;
 			buildPhases = (
+				DD6F7F471B38936676B5E143 /* [CP] Check Pods Manifest.lock */,
 				7366FE1D1E22B41F003DF366 /* Sources */,
 				7366FE1E1E22B41F003DF366 /* Frameworks */,
 				7366FE1F1E22B41F003DF366 /* Resources */,
+				50724A21CF9068EF02124BE6 /* [CP] Embed Pods Frameworks */,
+				4AB3DAD58A5D58B015C529FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7366FE4E1E22B41F003DF366 /* Build configuration list for PBXNativeTarget "GPACalculatorTests" */;
 			buildPhases = (
+				0E51C4880C9BB03D30A04633 /* [CP] Check Pods Manifest.lock */,
 				7366FE331E22B41F003DF366 /* Sources */,
 				7366FE341E22B41F003DF366 /* Frameworks */,
 				7366FE351E22B41F003DF366 /* Resources */,
+				AE11D27D3C1A5DC936D8A953 /* [CP] Embed Pods Frameworks */,
+				A31BAC9AB121D8A988832BB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7366FE511E22B41F003DF366 /* Build configuration list for PBXNativeTarget "GPACalculatorUITests" */;
 			buildPhases = (
+				7C2CFF3970CEFD83E1B044C3 /* [CP] Check Pods Manifest.lock */,
 				7366FE3E1E22B41F003DF366 /* Sources */,
 				7366FE3F1E22B41F003DF366 /* Frameworks */,
 				7366FE401E22B41F003DF366 /* Resources */,
+				6C8196B67CF027B0EF928F53 /* [CP] Embed Pods Frameworks */,
+				3C6583951F99B68892BE3D9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,13 +267,13 @@
 					};
 					7366FE361E22B41F003DF366 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 9SR8L2XE3A;
+						DevelopmentTeam = M64HPXXUJF;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7366FE201E22B41F003DF366;
 					};
 					7366FE411E22B41F003DF366 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 9SR8L2XE3A;
+						DevelopmentTeam = M64HPXXUJF;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7366FE201E22B41F003DF366;
 					};
@@ -276,6 +325,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E51C4880C9BB03D30A04633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPACalculatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C6583951F99B68892BE3D9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculatorUITests/Pods-GPACalculatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AB3DAD58A5D58B015C529FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculator/Pods-GPACalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50724A21CF9068EF02124BE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculator/Pods-GPACalculator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculator/Pods-GPACalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C8196B67CF027B0EF928F53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculatorUITests/Pods-GPACalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2CFF3970CEFD83E1B044C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPACalculatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A31BAC9AB121D8A988832BB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculatorTests/Pods-GPACalculatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE11D27D3C1A5DC936D8A953 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPACalculatorTests/Pods-GPACalculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD6F7F471B38936676B5E143 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPACalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7366FE1D1E22B41F003DF366 /* Sources */ = {
@@ -439,6 +638,7 @@
 		};
 		7366FE4C1E22B41F003DF366 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6032B19D9468E5585D8DD4F /* Pods-GPACalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -457,6 +657,7 @@
 		};
 		7366FE4D1E22B41F003DF366 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974046953732B117CDC8D35B /* Pods-GPACalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -474,10 +675,11 @@
 		};
 		7366FE4F1E22B41F003DF366 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378D9D55728BCBA57CED2637 /* Pods-GPACalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 9SR8L2XE3A;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = GPACalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.GPACalculatorTests;
@@ -489,10 +691,11 @@
 		};
 		7366FE501E22B41F003DF366 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36E1AA7CD1A0820F58345713 /* Pods-GPACalculatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 9SR8L2XE3A;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = GPACalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.GPACalculatorTests;
@@ -504,9 +707,10 @@
 		};
 		7366FE521E22B41F003DF366 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3C589F5350BAB28915A085 /* Pods-GPACalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9SR8L2XE3A;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = GPACalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.GPACalculatorUITests;
@@ -518,9 +722,10 @@
 		};
 		7366FE531E22B41F003DF366 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93703C42C90E08174F4415D8 /* Pods-GPACalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9SR8L2XE3A;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = GPACalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.GPACalculatorUITests;

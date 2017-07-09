@@ -21,10 +21,12 @@
  */
 
 import UIKit
+import Toast_Swift
 
 class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var selected = 0
+    var toasted = false
     
     @IBOutlet var classNameField: UITextField!
     @IBOutlet var multiplierField: UITextField!
@@ -212,6 +214,11 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func disablePicker() {
         picker.isUserInteractionEnabled = false
-        picker.backgroundColor = .red
+        // picker.backgroundColor = .red
+      
+        if !toasted {
+            self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .top)
+            toasted = true
+        }
     }
 }
