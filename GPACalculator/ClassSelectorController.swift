@@ -23,7 +23,7 @@
 import UIKit
 import Toast_Swift
 
-class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
+class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var selected = 0
     var toasted = false
@@ -210,6 +210,14 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
+        if touches.contains(where: { touch in
+            picker.frame.contains(touch.location(in: self.view))
+        }) {
+            if !picker.isUserInteractionEnabled {
+                self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .top)
+            }
+        }
     }
     
     func disablePicker() {
@@ -219,19 +227,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         if !toasted {
             self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .top)
             toasted = true
-        }
-    }
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
-    }
-}
-
-extension UIPickerView {
-    func pickerTapped(nizer: UITapGestureRecognizer, onPick: @escaping (Int) -> ()) {
-        if !self.isUserInteractionEnabled {
-            superview?.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .top)
         }
     }
 }
