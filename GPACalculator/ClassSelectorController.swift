@@ -214,8 +214,9 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         if touches.contains(where: { touch in
             picker.frame.contains(touch.location(in: self.view))
         }) {
-            if !picker.isUserInteractionEnabled {
-                self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .top)
+            if !picker.isUserInteractionEnabled && !toasted {
+                self.view.makeToast("Save Current Class Before Editing Another", duration: 3.0, position: .bottom)
+                toasted = true
             }
         }
     }
@@ -224,9 +225,9 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         picker.isUserInteractionEnabled = false
         // picker.backgroundColor = .red
         
-        if !toasted {
-            self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .top)
-            toasted = true
-        }
+        //if !toasted {
+            //self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .center)
+        //    toasted = true
+        //}
     }
 }
