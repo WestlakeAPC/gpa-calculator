@@ -64,6 +64,11 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         creditsBar.addTarget(self, action: #selector(self.disablePicker), for: UIControlEvents.valueChanged)
     }
 
+    // Exit View
+    @IBAction func exit(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -204,7 +209,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             self.view.endEditing(true)
             
             usleep(10000)
-            self.performSegue(withIdentifier: "ExitSelectorSegue", sender: self)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

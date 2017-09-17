@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E191a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -230,7 +230,7 @@
                                     <navigationItem title="New Class" id="dfe-W9-nMs">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pZF-Ly-hsJ">
                                             <connections>
-                                                <segue destination="49e-Tb-3d3" kind="show" id="Cfz-jl-bOm"/>
+                                                <action selector="exit:" destination="c0h-fF-BzU" id="Lad-09-K2g"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -392,7 +392,7 @@
                                     <navigationItem title="Edit Information" id="QQJ-Rz-RSJ">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uc9-vR-djH">
                                             <connections>
-                                                <segue destination="49e-Tb-3d3" kind="show" id="WqY-Yd-5Ws"/>
+                                                <action selector="exit:" destination="0ka-8a-8aj" id="06q-pw-KZv"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -565,6 +565,6 @@
         <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EAx-Cm-4wL"/>
+        <segue reference="nA5-ux-Lxm"/>
     </inferredMetricsTieBreakers>
 </document>

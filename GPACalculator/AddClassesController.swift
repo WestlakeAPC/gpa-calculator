@@ -48,6 +48,11 @@ class AddClassesController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Exit View
+    @IBAction func exit(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func addNewClass(_ sender: Any) {
         // Class name
         guard let className = classNameField.text, !className.isEmpty else {
@@ -137,7 +142,7 @@ class AddClassesController: UIViewController {
             self.view.endEditing(true)
             
             usleep(10000)
-            self.performSegue(withIdentifier: "ExitAddClassSegue", sender: self)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
