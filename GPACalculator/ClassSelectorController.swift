@@ -27,6 +27,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     var selected = 0
     var toasted = false
+    var toasting = false
     
     @IBOutlet var classNameField: UITextField!
     @IBOutlet var multiplierField: UITextField!
@@ -219,9 +220,16 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         if touches.contains(where: { touch in
             picker.frame.contains(touch.location(in: self.view))
         }) {
-            if !picker.isUserInteractionEnabled && !toasted {
-                self.view.makeToast("Save Current Class Before Editing Another", duration: 3.0, position: .bottom)
+            if !picker.isUserInteractionEnabled && !toasting {
+                toasting = true
+                
+                self.view.makeToast("Save and exit to menu before editing another class.", duration: 3.0, position: .bottom)
                 toasted = true
+                
+                DispatchQueue.main.async {
+                    usleep(4000000)
+                    self.toasting = false
+                }
             }
         }
     }
@@ -230,9 +238,9 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         picker.isUserInteractionEnabled = false
         // picker.backgroundColor = .red
         
-        //if !toasted {
-            //self.view.makeToast("Exit to menu before editing another class.", duration: 3.0, position: .center)
-        //    toasted = true
-        //}
+        if !toasted {
+            self.view.makeToast("Same and exit to menu before editing another class.", duration: 3.0, position: .bottom)
+            toasted = true
+        }
     }
 }
