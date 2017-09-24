@@ -223,10 +223,10 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
             if !picker.isUserInteractionEnabled && !toasting {
                 toasting = true
                 
-                self.view.makeToast("Save and exit to menu before editing another class.", duration: 3.0, position: .bottom)
+                self.view.makeToast("Save before editing another class.", duration: 3.0, position: .bottom)
                 toasted = true
                 
-                DispatchQueue.main.async {
+                DispatchQueue.global().async {
                     usleep(4000000)
                     self.toasting = false
                 }
@@ -239,7 +239,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         // picker.backgroundColor = .red
         
         if !toasted {
-            self.view.makeToast("Same and exit to menu before editing another class.", duration: 3.0, position: .bottom)
+            self.view.makeToast("Save before editing another class.", duration: 3.0, position: .bottom)
             toasted = true
         }
     }
