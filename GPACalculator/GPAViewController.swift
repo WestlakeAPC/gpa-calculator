@@ -32,15 +32,9 @@ class GPAViewController: UIViewController {
         super.viewWillAppear(animated)
         Information.initializeArray()
         
-        var totalWestlakeGrades = 0.0;
-        var totalStandardCredit = 0.0;
-        var totalStandardGrades = 0.0;
-        
-        for classAndGrade in Information.classesAndGrades {
-            totalWestlakeGrades += Double(classAndGrade.grade) * classAndGrade.multiplier
-            totalStandardGrades += Double(classAndGrade.grade) * classAndGrade.credits
-            totalStandardCredit += classAndGrade.credits
-        }
+        let totalWestlakeGrades = Information.classesAndGrades.map({ Double(classAndGrade.grade) * classAndGrade.multiplier }).reduce(0, { (sum, new) in sum + new })
+        let totalStandardCredit = Information.classesAndGrades.map({ Double(classAndGrade.grade) * classAndGrade.credits }).reduce(0, { (sum, new) in sum + new })
+        let totalStandardGrades = Information.classesAndGrades.map({ classAndGrade.credits }).reduce(0, { (sum, new) in sum + new })
         
         guard totalStandardCredit != 0, Information.classesAndGrades.count != 0 else {
             print("Division by zero in GPA calculation.")
@@ -60,63 +54,51 @@ class GPAViewController: UIViewController {
         var letter: String = ""
         switch (standardGPA) {
             case 0..<65:
-                standardGPALabel.textColor = .black
-                letterGradeLabel.textColor = .black
+                setColor(.black)
                 fourPointScale = 0
                 letter = "E/F"
             case 65...66:
-                standardGPALabel.textColor = .red
-                letterGradeLabel.textColor = .red
+                setColor(.red)
                 fourPointScale = 1
                 letter = "D"
             case 67...69:
-                standardGPALabel.textColor = .red
-                letterGradeLabel.textColor = .red
+                setColor(.red)
                 fourPointScale = 1.3
                 letter = "D+"
             case 70...72:
-                standardGPALabel.textColor = .orange
-                letterGradeLabel.textColor = .orange
+                setColor(.orange)
                 fourPointScale = 1.7
                 letter = "C-"
             case 73...76:
-                standardGPALabel.textColor = .orange
-                letterGradeLabel.textColor = .orange
+                setColor(.orange)
                 fourPointScale = 2.0
                 letter = "C"
             case 77...79:
-                standardGPALabel.textColor = .orange
-                letterGradeLabel.textColor = .orange
+                setColor(.orange)
                 fourPointScale = 2.3
                 letter = "C+"
             case 80...82:
-                standardGPALabel.textColor = .yellow
-                letterGradeLabel.textColor = .yellow
+                setColor(.yellow)
                 fourPointScale = 2.7
                 letter = "B-"
             case 83...86:
-                standardGPALabel.textColor = .yellow
-                letterGradeLabel.textColor = .yellow
+                setColor(.yellow)
                 fourPointScale = 3.0
                 letter = "B"
             case 87...89:
-                standardGPALabel.textColor = .yellow
-                letterGradeLabel.textColor = .yellow
+                setColor(.yellow)
                 fourPointScale = 3.3
                 letter = "B+"
             case 90...92:
-                standardGPALabel.textColor = .green
-                letterGradeLabel.textColor = .green
+                setColor(.green)
                 fourPointScale = 3.7
                 letter = "A-"
             case 93...96:
-                standardGPALabel.textColor = .green
-                letterGradeLabel.textColor = .green
+                setColor(.green)
                 fourPointScale = 4.0
                 letter = "A"
             case 97...100:
-                standardGPALabel.textColor = .green
-                letterGradeLabel.textColor = .green
+                setColor(.green)
                 fourPointScale = 4.0
                 letter = "A+"
             default:
@@ -134,6 +116,11 @@ class GPAViewController: UIViewController {
         
         standardGPALabel.text = "\(fourPointScale)"
         letterGradeLabel.text = "\(letter)"
+    }
+    
+    func setColor(_ color: UIColor) {
+        standardGPALabel.textColor = color
+        letterGradeLabel.textColor = color
     }
     
     override func viewDidLoad() {
