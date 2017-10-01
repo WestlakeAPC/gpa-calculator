@@ -32,9 +32,9 @@ class GPAViewController: UIViewController {
         super.viewWillAppear(animated)
         Information.initializeArray()
         
-        let totalWestlakeGrades = Information.classesAndGrades.map({ Double(classAndGrade.grade) * classAndGrade.multiplier }).reduce(0, { (sum, new) in sum + new })
-        let totalStandardCredit = Information.classesAndGrades.map({ Double(classAndGrade.grade) * classAndGrade.credits }).reduce(0, { (sum, new) in sum + new })
-        let totalStandardGrades = Information.classesAndGrades.map({ classAndGrade.credits }).reduce(0, { (sum, new) in sum + new })
+        let totalWestlakeGrades = Information.classesAndGrades.map({ Double($0.grade) * $0.multiplier }).reduce(0, { (sum, grade) in sum + credits })
+        let totalStandardCredit = Information.classesAndGrades.map({ Double($0.grade) * $0.credits }).reduce(0, { (sum, grade) in sum + credits })
+        let totalStandardGrades = Information.classesAndGrades.map({ $0.credits }).reduce(0, { (sum, credits) in sum + credits })
         
         guard totalStandardCredit != 0, Information.classesAndGrades.count != 0 else {
             print("Division by zero in GPA calculation.")
