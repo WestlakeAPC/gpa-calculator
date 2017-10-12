@@ -284,7 +284,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmi-o9-6B8">
-                                <rect key="frame" x="16" y="480" width="339" height="30"/>
+                                <rect key="frame" x="31" y="607" width="313" height="30"/>
                                 <state key="normal" title="Add Class"/>
                                 <connections>
                                     <action selector="addNewClass:" destination="c0h-fF-BzU" eventType="touchUpInside" id="x8V-L8-J3X"/>
@@ -306,14 +306,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q0n-e4-w3G" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="1hJ-0h-5ti"/>
+                            <constraint firstItem="PXL-s2-yAu" firstAttribute="top" secondItem="Zmi-o9-6B8" secondAttribute="bottom" constant="30" id="2UH-sL-q0h"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="3an-TB-AQO"/>
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="top" secondItem="6pn-Pz-OY3" secondAttribute="bottom" constant="7" id="4DD-6r-XHC"/>
                             <constraint firstItem="kzn-pw-oIf" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="5mu-hg-0O1"/>
                             <constraint firstItem="aVz-72-2dD" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="6aj-Uz-BxX"/>
                             <constraint firstItem="U6p-cP-Jaa" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="6hF-xt-4Qq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zmi-o9-6B8" secondAttribute="trailing" constant="4" id="7BX-6I-ZrA"/>
-                            <constraint firstItem="Zmi-o9-6B8" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="AD7-PG-51G"/>
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="BYN-MW-dkr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zmi-o9-6B8" secondAttribute="trailing" constant="15" id="E7L-d9-rgA"/>
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="top" secondItem="k8X-Rz-gNc" secondAttribute="bottom" constant="70" id="HuO-hC-okQ"/>
                             <constraint firstItem="kzn-pw-oIf" firstAttribute="leading" secondItem="aVm-Mm-MB3" secondAttribute="trailing" constant="8" id="I9N-oN-CwP"/>
                             <constraint firstItem="Q0n-e4-w3G" firstAttribute="top" secondItem="kzn-pw-oIf" secondAttribute="bottom" constant="40" id="IiB-cH-Gs0"/>
@@ -332,13 +332,13 @@
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="ey6-I0-wEj"/>
                             <constraint firstItem="aVz-72-2dD" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="kbJ-yZ-0EL"/>
                             <constraint firstItem="tvo-zN-BFK" firstAttribute="top" secondItem="XOU-yn-1g9" secondAttribute="bottom" constant="8" id="nsb-NA-54x"/>
-                            <constraint firstItem="Zmi-o9-6B8" firstAttribute="top" secondItem="U6p-cP-Jaa" secondAttribute="bottom" constant="3" id="oIc-Mh-b8z"/>
                             <constraint firstAttribute="trailing" secondItem="6pn-Pz-OY3" secondAttribute="trailing" constant="16" id="qIl-H7-UdZ"/>
                             <constraint firstItem="6pn-Pz-OY3" firstAttribute="top" secondItem="k8X-Rz-gNc" secondAttribute="bottom" constant="42" id="r73-XY-gsM"/>
                             <constraint firstItem="aVz-72-2dD" firstAttribute="top" secondItem="tvo-zN-BFK" secondAttribute="bottom" constant="40" id="vKg-eu-qP2"/>
                             <constraint firstItem="36Y-JH-cmb" firstAttribute="top" secondItem="6pn-Pz-OY3" secondAttribute="bottom" constant="8" id="vMW-Pu-gbe"/>
                             <constraint firstItem="tvo-zN-BFK" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="vpd-Lh-ghy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U6p-cP-Jaa" secondAttribute="trailing" constant="2" id="vq2-on-DZJ"/>
+                            <constraint firstItem="Zmi-o9-6B8" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" constant="15" id="w8K-Wb-MG8"/>
                             <constraint firstItem="U6p-cP-Jaa" firstAttribute="top" secondItem="Fpg-aH-Bxd" secondAttribute="bottom" constant="22" id="ykI-OG-B0H"/>
                             <constraint firstItem="k8X-Rz-gNc" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="z8h-ZI-cnW"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="top" secondItem="Wie-mN-R8Q" secondAttribute="bottom" constant="33" id="zaC-ht-gMi"/>
@@ -403,7 +403,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
-                                <rect key="frame" x="15" y="510" width="345" height="30"/>
+                                <rect key="frame" x="15" y="607" width="345" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="updateClass:" destination="0ka-8a-8aj" eventType="touchDown" id="tXg-8a-icc"/>
@@ -490,9 +490,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="EMd-4d-VZq" secondAttribute="trailing" constant="1" id="4zC-9l-DUD"/>
                             <constraint firstItem="dB6-9i-k0S" firstAttribute="top" secondItem="SNz-ld-VYY" secondAttribute="bottom" constant="16" id="9oB-Hp-AAx"/>
                             <constraint firstAttribute="trailing" secondItem="dbm-FZ-S7B" secondAttribute="trailing" constant="17" id="AlC-7f-kRs"/>
-                            <constraint firstItem="m2e-h7-Sje" firstAttribute="top" secondItem="sOZ-6o-pTV" secondAttribute="bottom" constant="8" id="BFm-G2-6Rg"/>
                             <constraint firstItem="sOZ-6o-pTV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="FZE-AT-ii2"/>
-                            <constraint firstItem="m2e-h7-Sje" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="M4k-QX-cBO"/>
+                            <constraint firstItem="qqc-Un-rAN" firstAttribute="top" secondItem="m2e-h7-Sje" secondAttribute="bottom" constant="30" id="LmD-jP-RLd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fld-cv-XDb" secondAttribute="trailing" constant="1" id="NNy-4C-RH7"/>
                             <constraint firstItem="hfR-MI-cDB" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="NP9-IZ-aPv"/>
                             <constraint firstAttribute="trailing" secondItem="dB6-9i-k0S" secondAttribute="trailing" constant="16" id="O8D-5D-5TJ"/>
@@ -504,6 +503,7 @@
                             <constraint firstItem="kAX-TC-Ga4" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-1" id="Uvj-zd-Ltk"/>
                             <constraint firstAttribute="trailing" secondItem="JhE-YF-lBy" secondAttribute="trailing" constant="16" id="V74-Fx-7OO"/>
                             <constraint firstItem="SNz-ld-VYY" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leadingMargin" constant="-1" id="VLs-Oa-mBu"/>
+                            <constraint firstAttribute="trailing" secondItem="m2e-h7-Sje" secondAttribute="trailing" constant="15" id="Vpr-MM-fkW"/>
                             <constraint firstItem="pEY-Yu-Mol" firstAttribute="top" secondItem="5tl-yN-EGX" secondAttribute="top" id="YFM-Gm-oWG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aNi-Nd-dId" secondAttribute="trailing" constant="1" id="YeK-xS-xb9"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="trailing" secondItem="pEY-Yu-Mol" secondAttribute="trailing" id="a9G-HM-0kA"/>
@@ -527,9 +527,9 @@
                             <constraint firstItem="kAX-TC-Ga4" firstAttribute="top" secondItem="hfR-MI-cDB" secondAttribute="bottom" constant="7" id="rsx-Ac-XRE"/>
                             <constraint firstItem="aNi-Nd-dId" firstAttribute="leading" secondItem="kAX-TC-Ga4" secondAttribute="trailing" constant="9" id="sI2-9y-LRG"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="centerX" secondItem="d7M-1B-pBC" secondAttribute="centerX" id="tyJ-Ou-PsL"/>
-                            <constraint firstAttribute="trailing" secondItem="m2e-h7-Sje" secondAttribute="trailing" constant="15" id="uji-Rg-gzn"/>
                             <constraint firstItem="JhE-YF-lBy" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="wGU-Wa-sAY"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="top" secondItem="d7M-1B-pBC" secondAttribute="bottom" constant="8" symbolic="YES" id="xEv-vC-KCe"/>
+                            <constraint firstItem="m2e-h7-Sje" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="y43-2S-aFa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -556,6 +556,6 @@
         <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EAx-Cm-4wL"/>
+        <segue reference="nA5-ux-Lxm"/>
     </inferredMetricsTieBreakers>
 </document>
