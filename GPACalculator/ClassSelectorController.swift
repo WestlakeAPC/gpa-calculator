@@ -234,7 +234,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    func disablePicker() {
+    @objc func disablePicker() {
         picker.isUserInteractionEnabled = false
         // picker.backgroundColor = .red
         

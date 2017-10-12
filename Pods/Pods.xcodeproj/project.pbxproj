@@ -37,34 +37,34 @@
 		0A84E4AD5BB7EB9F7CBA87E7D19A35B5 /* Pods-GPACalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GPACalculator.release.xcconfig"; sourceTree = "<group>"; };
 		132E4084A359770478488B19495512E6 /* Pods-GPACalculatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GPACalculatorTests-dummy.m"; sourceTree = "<group>"; };
 		2F8E56AF52E827BE3A9A1FDDAE8E42D3 /* Pods-GPACalculatorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GPACalculatorUITests-dummy.m"; sourceTree = "<group>"; };
-		304B4BF382FA0581BF9C24C1A07736EA /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast_Swift.framework; path = "Toast-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		304B4BF382FA0581BF9C24C1A07736EA /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDD3906E5D43F413AD1791EB1F63769 /* Pods-GPACalculator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GPACalculator-dummy.m"; sourceTree = "<group>"; };
 		3E5862BB860980C0C2A19682A6620FBD /* Pods-GPACalculatorUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GPACalculatorUITests-resources.sh"; sourceTree = "<group>"; };
 		468A6005E2C02E25BE517BCFF42F52A8 /* Pods-GPACalculatorUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GPACalculatorUITests-frameworks.sh"; sourceTree = "<group>"; };
 		4CD48265E348ABB7757E1825B8361086 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CF46408FC9A33C378B196C820760893 /* Pods_GPACalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GPACalculator.framework; path = "Pods-GPACalculator.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF46408FC9A33C378B196C820760893 /* Pods_GPACalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8F59F7B987B64950CD3239BF28B7F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51AA4515B540E0E642CE5356803C24EC /* Pods_GPACalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GPACalculatorUITests.framework; path = "Pods-GPACalculatorUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51AA4515B540E0E642CE5356803C24EC /* Pods_GPACalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5670026486D33CEB48899D57A4FCC2DB /* Pods-GPACalculatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GPACalculatorTests.modulemap"; sourceTree = "<group>"; };
+		5670026486D33CEB48899D57A4FCC2DB /* Pods-GPACalculatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GPACalculatorTests.modulemap"; sourceTree = "<group>"; };
 		5C265B6AA6A3EF130964701F3FDE4692 /* Pods-GPACalculatorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GPACalculatorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		659EAFE40EB9E0997411CE18B06C7AD7 /* Pods-GPACalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GPACalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		660D2AC2A12D0CB3A5C29849F9BD3C37 /* Pods-GPACalculator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GPACalculator-umbrella.h"; sourceTree = "<group>"; };
 		68EE9E7CAFEE4F2ECECB65118AC958D2 /* Pods-GPACalculatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GPACalculatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6EFEF0756D7D94085614561BD4C077BE /* Pods-GPACalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GPACalculator.modulemap"; sourceTree = "<group>"; };
+		6EFEF0756D7D94085614561BD4C077BE /* Pods-GPACalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GPACalculator.modulemap"; sourceTree = "<group>"; };
 		81EA44DB189EAC06FCDBF7AFF6555D51 /* Pods-GPACalculatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GPACalculatorTests-umbrella.h"; sourceTree = "<group>"; };
 		83AA90B25EC204AC84006848E9B833CB /* Pods-GPACalculatorTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GPACalculatorTests-frameworks.sh"; sourceTree = "<group>"; };
 		91D7F2B972694947834B699447B7B1AC /* Pods-GPACalculator-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GPACalculator-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97E6C38D296A4A13561464A04FFBF594 /* Pods-GPACalculatorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GPACalculatorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9C7AE8A7573F2C1E667E94D6C9CB1A19 /* Pods-GPACalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GPACalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
-		A3A8C47AA5C2062F8D6330705D676319 /* Pods-GPACalculatorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GPACalculatorUITests.modulemap"; sourceTree = "<group>"; };
+		A3A8C47AA5C2062F8D6330705D676319 /* Pods-GPACalculatorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GPACalculatorUITests.modulemap"; sourceTree = "<group>"; };
 		A3B2C88C7172A980B182A014967E4724 /* Pods-GPACalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GPACalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6D81C7EC2873D51B80D8E985B844A9B /* Pods-GPACalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GPACalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB12DF463ACDE7B88901009A390FBC5C /* Pods-GPACalculator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GPACalculator-frameworks.sh"; sourceTree = "<group>"; };
 		AC21E042593269EBEF50C9C60FC9B024 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
-		C1A8AA3552BB2AB3C9F9689F1D96AA79 /* Pods_GPACalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GPACalculatorTests.framework; path = "Pods-GPACalculatorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A8AA3552BB2AB3C9F9689F1D96AA79 /* Pods_GPACalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPACalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C332BE2044FC889CCC5496E7F2D194A4 /* Pods-GPACalculatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GPACalculatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CB59150BD9CFE12D840D4F2E3262E240 /* Pods-GPACalculator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GPACalculator-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBAA452DC428152CC82DD57E67113031 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		E05B778E1B37985EBC078D0C5BA74992 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
 		E22E952F6F34770FEF10B74455A0ACB1 /* Pods-GPACalculatorTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GPACalculatorTests-resources.sh"; sourceTree = "<group>"; };
 		E4FA58BB4E9110D9A07E542DCF5A1190 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE18B53B4D5DBDC5263EE6262E2583DD /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
+		EE18B53B4D5DBDC5263EE6262E2583DD /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
 		F1138A1C2C86317E3DDC06FA7F8FB899 /* Pods-GPACalculatorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GPACalculatorUITests-umbrella.h"; sourceTree = "<group>"; };
 		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -159,7 +159,6 @@
 				9F6068E46F837C6016823EBEE5392A58 /* Toast.swift */,
 				91FFC9D276F2D51EC5F3FF59947B6F5A /* Support Files */,
 			);
-			name = "Toast-Swift";
 			path = "Toast-Swift";
 			sourceTree = "<group>";
 		};
@@ -367,6 +366,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					BF634FC0FC1B6B3624229B407482BE42 = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -462,7 +466,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -569,7 +574,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
