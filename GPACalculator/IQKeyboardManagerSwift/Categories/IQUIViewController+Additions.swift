@@ -1,5 +1,5 @@
 //
-// IQUIWindow+Hierarchy.m
+//  IQUIViewController+Additions.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,31 +21,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "IQUIWindow+Hierarchy.h"
-#import <UIKit/UINavigationController.h>
+import UIKit
 
-@implementation UIWindow (IQ_UIWindow_Hierarchy)
 
-- (UIViewController*)topMostController
-{
-    UIViewController *topController = [self rootViewController];
-    
-    //  Getting topMost ViewController
-    while ([topController presentedViewController])	topController = [topController presentedViewController];
-	
-    //  Returning topMost ViewController
-    return topController;
+private var kIQLayoutGuideConstraint = "kIQLayoutGuideConstraint"
+
+
+public extension UIViewController {
+
+    /**
+    To set customized distance from keyboard for textField/textView. Can't be less than zero
+    */
+    @IBOutlet public var IQLayoutGuideConstraint: NSLayoutConstraint? {
+        get {
+            
+            return objc_getAssociatedObject(self, &kIQLayoutGuideConstraint) as? NSLayoutConstraint
+        }
+
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQLayoutGuideConstraint, newValue,objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
 }
-
-- (UIViewController*)currentViewController;
-{
-    UIViewController *currentViewController = [self topMostController];
-    
-    while ([currentViewController isKindOfClass:[UINavigationController class]] && [(UINavigationController*)currentViewController topViewController])
-        currentViewController = [(UINavigationController*)currentViewController topViewController];
-    
-    return currentViewController;
-}
-
-
-@end

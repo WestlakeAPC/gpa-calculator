@@ -1,5 +1,5 @@
 //
-// IQUIViewController+Additions.m
+//  IQKeyboardManagerConstantsInternal.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,19 +21,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "IQUIViewController+Additions.h"
-#import <objc/runtime.h>
 
-@implementation UIViewController (Additions)
+import Foundation
 
--(void)setIQLayoutGuideConstraint:(NSLayoutConstraint *)IQLayoutGuideConstraint
-{
-    objc_setAssociatedObject(self, @selector(IQLayoutGuideConstraint), IQLayoutGuideConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+///-----------------------------------
+/// MARK: IQLayoutGuidePosition
+///-----------------------------------
+
+/**
+`IQLayoutGuidePositionNone`
+If there are no IQLayoutGuideConstraint associated with viewController
+
+`IQLayoutGuidePositionTop`
+If provided IQLayoutGuideConstraint is associated with with viewController topLayoutGuide
+
+`IQLayoutGuidePositionBottom`
+If provided IQLayoutGuideConstraint is associated with with viewController bottomLayoutGuide
+*/
+enum IQLayoutGuidePosition : Int {
+    case none
+    case top
+    case bottom
 }
-
--(NSLayoutConstraint *)IQLayoutGuideConstraint
-{
-    return objc_getAssociatedObject(self, @selector(IQLayoutGuideConstraint));
-}
-
-@end

@@ -1,5 +1,5 @@
 //
-// IQKeyboardManagerConstants.h
+//  IQKeyboardManagerConstants.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,30 +21,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef IQKeyboardManagerConstants_h
-#define IQKeyboardManagerConstants_h
 
-#import <Foundation/NSObjCRuntime.h>
+import Foundation
 
 ///-----------------------------------
-/// @name IQAutoToolbarManageBehaviour
+/// MARK: IQAutoToolbarManageBehaviour
 ///-----------------------------------
 
 /**
- `IQAutoToolbarBySubviews`
- Creates Toolbar according to subview's hirarchy of Textfield's in view.
- 
- `IQAutoToolbarByTag`
- Creates Toolbar according to tag property of TextField's.
- 
- `IQAutoToolbarByPosition`
- Creates Toolbar according to the y,x position of textField in it's superview coordinate.
- */
-typedef NS_ENUM(NSInteger, IQAutoToolbarManageBehaviour) {
-    IQAutoToolbarBySubviews,
-    IQAutoToolbarByTag,
-    IQAutoToolbarByPosition,
-};
+`IQAutoToolbarBySubviews`
+Creates Toolbar according to subview's hirarchy of Textfield's in view.
+
+`IQAutoToolbarByTag`
+Creates Toolbar according to tag property of TextField's.
+
+`IQAutoToolbarByPosition`
+Creates Toolbar according to the y,x position of textField in it's superview coordinate.
+*/
+public enum IQAutoToolbarManageBehaviour : Int {
+    case bySubviews
+    case byTag
+    case byPosition
+}
 
 /**
  `IQPreviousNextDisplayModeDefault`
@@ -56,19 +54,11 @@ typedef NS_ENUM(NSInteger, IQAutoToolbarManageBehaviour) {
  `IQPreviousNextDisplayModeAlwaysShow`
  Always show nextPrevious buttons, if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
  */
-typedef NS_ENUM(NSUInteger, IQPreviousNextDisplayMode) {
-    IQPreviousNextDisplayModeDefault,
-    IQPreviousNextDisplayModeAlwaysHide,
-    IQPreviousNextDisplayModeAlwaysShow,
-};
-
-///-------------------
-/// @name Localization
-///-------------------
-
-#define IQLocalizedString(key, comment) [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"IQKeyboardManager" ofType:@"bundle"]] localizedStringForKey:(key) value:@"" table:@"IQKeyboardManager"]
-
-#endif
+public enum IQPreviousNextDisplayMode : Int {
+    case Default
+    case alwaysHide
+    case alwaysShow
+}
 
 /*
  
@@ -77,7 +67,7 @@ typedef NS_ENUM(NSUInteger, IQPreviousNextDisplayMode) {
  |                                   iOS NSNotification Mechanism                                    |
  /---------------------------------------------------------------------------------------------------\
  \---------------------------------------------------------------------------------------------------/
-
+ 
  
  ------------------------------------------------------------
  When UITextField become first responder
@@ -92,7 +82,7 @@ typedef NS_ENUM(NSUInteger, IQPreviousNextDisplayMode) {
  - UIKeyboardWillShowNotification
  - UITextViewTextDidBeginEditingNotification (UITextView)
  - UIKeyboardDidShowNotification
-
+ 
  ------------------------------------------------------------
  When switching focus from UITextField to another UITextField
  ------------------------------------------------------------
@@ -100,7 +90,7 @@ typedef NS_ENUM(NSUInteger, IQPreviousNextDisplayMode) {
  - UITextFieldTextDidBeginEditingNotification (UITextField2)
  - UIKeyboardWillShowNotification
  - UIKeyboardDidShowNotification
-
+ 
  ------------------------------------------------------------
  When switching focus from UITextView to another UITextView
  ------------------------------------------------------------
@@ -116,7 +106,7 @@ typedef NS_ENUM(NSUInteger, IQPreviousNextDisplayMode) {
  - UIKeyboardWillShowNotification
  - UITextViewTextDidBeginEditingNotification (UITextView)
  - UIKeyboardDidShowNotification
-
+ 
  ------------------------------------------------------------
  When switching focus from UITextView to UITextField
  ------------------------------------------------------------
@@ -124,13 +114,13 @@ typedef NS_ENUM(NSUInteger, IQPreviousNextDisplayMode) {
  - UITextFieldTextDidBeginEditingNotification (UITextField)
  - UIKeyboardWillShowNotification
  - UIKeyboardDidShowNotification
-
+ 
  ------------------------------------------------------------
  When opening/closing UIKeyboard Predictive bar
  ------------------------------------------------------------
  - UIKeyboardWillShowNotification
  - UIKeyboardDidShowNotification
-
+ 
  ------------------------------------------------------------
  On orientation change
  ------------------------------------------------------------

@@ -1,5 +1,5 @@
 //
-// IQKeyboardManagerConstantsInternal.h
+//  IQUIWindow+Hierarchy.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,31 +21,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef IQKeyboardManagerConstantsInternal_h
-#define IQKeyboardManagerConstantsInternal_h
 
+import UIKit
 
-///-----------------------------------
-/// @name IQLayoutGuidePosition
-///-----------------------------------
+/** @abstract UIWindow hierarchy category.  */
+public extension UIWindow {
 
-/**
- `IQLayoutGuidePositionNone`
- If there are no IQLayoutGuideConstraint associated with viewController
- 
- `IQLayoutGuidePositionTop`
- If provided IQLayoutGuideConstraint is associated with with viewController topLayoutGuide
- 
- `IQLayoutGuidePositionBottom`
- If provided IQLayoutGuideConstraint is associated with with viewController bottomLayoutGuide
- */
-typedef NS_ENUM(NSInteger, IQLayoutGuidePosition) {
-    IQLayoutGuidePositionNone,
-    IQLayoutGuidePositionTop,
-    IQLayoutGuidePositionBottom,
-};
+    /** @return Returns the current Top Most ViewController in hierarchy.   */
+    @objc override public func topMostController()->UIViewController? {
+        
+        var topController = rootViewController
+        
+        while let presentedController = topController?.presentedViewController {
+            topController = presentedController
+        }
+        
+        return topController
+    }
+    
+    /** @return Returns the topViewController in stack of topMostController.    */
+    public func currentViewController()->UIViewController? {
+        
+        var currentViewController = topMostController()
+        
+        while currentViewController != nil && currentViewController is UINavigationController && (currentViewController as! UINavigationController).topViewController != nil {
+            currentViewController = (currentViewController as! UINavigationController).topViewController
+        }
 
-#define IQ_IS_IOS10_OR_GREATER ([[NSProcessInfo processInfo] operatingSystemVersion].majorVersion >= 10)
-#define IQ_IS_IOS11_OR_GREATER ([[NSProcessInfo processInfo] operatingSystemVersion].majorVersion >= 11)
-
-#endif
+        return currentViewController
+    }
+}

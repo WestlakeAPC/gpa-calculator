@@ -1,5 +1,5 @@
 //
-// IQToolbar.h
+//  IQKeyboardManagerSwift.h
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,33 +21,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIToolbar.h>
-#import "IQTitleBarButtonItem.h"
+#import <UIKit/UIKit.h>
 
-/**
- IQToolbar for IQKeyboardManager.
- */
-@interface IQToolbar : UIToolbar <UIInputViewAudioFeedback>
+//! Project version number for IQKeyboardManagerSwift.
+FOUNDATION_EXPORT double IQKeyboardManagerSwiftVersionNumber;
 
-/**
- Previous bar button of toolbar.
- */
-@property(nonnull, nonatomic, strong) IQBarButtonItem *previousBarButton;
+//! Project version string for IQKeyboardManagerSwift.
+FOUNDATION_EXPORT const unsigned char IQKeyboardManagerSwiftVersionString[];
 
-/**
- Next bar button of toolbar.
- */
-@property(nonnull, nonatomic, strong) IQBarButtonItem *nextBarButton;
+// In this header, you should import all the public headers of your framework using statements like #import <IQKeyboardManagerSwift/PublicHeader.h>
 
-/**
- Title bar button of toolbar.
- */
-@property(nonnull, nonatomic, strong, readonly) IQTitleBarButtonItem *titleBarButton;
-
-/**
- Done bar button of toolbar.
- */
-@property(nonnull, nonatomic, strong) IQBarButtonItem *doneBarButton;
-
-@end
 

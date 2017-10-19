@@ -1,5 +1,5 @@
 //
-// IQUIScrollView+Additions.h
+//  IQUITextFieldView+Additions.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,15 +21,36 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-
-@interface UIScrollView (Additions)
+import Foundation
+import UIKit
 
 /**
- Restore scrollViewContentOffset when resigning from scrollView. Default is NO.
- */
-@property(nonatomic, assign) BOOL shouldRestoreScrollViewContentOffset;
+Uses default keyboard distance for textField.
+*/
+public let kIQUseDefaultKeyboardDistance = CGFloat.greatestFiniteMagnitude
 
+private var kIQKeyboardDistanceFromTextField = "kIQKeyboardDistanceFromTextField"
 
-@end
+/**
+UIView category for managing UITextField/UITextView
+*/
+public extension UIView {
+
+    /**
+    To set customized distance from keyboard for textField/textView. Can't be less than zero
+    */
+    public var keyboardDistanceFromTextField: CGFloat {
+        get {
+            
+            if let aValue = objc_getAssociatedObject(self, &kIQKeyboardDistanceFromTextField) as? CGFloat {
+                return aValue
+            } else {
+                return kIQUseDefaultKeyboardDistance
+            }
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQKeyboardDistanceFromTextField, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+
