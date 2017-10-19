@@ -237,10 +237,10 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     @objc func disablePicker() {
         picker.isUserInteractionEnabled = false
         // picker.backgroundColor = .red
-        
+        /*
         if !toasted {
             self.view.makeToast("Save before editing another class.", duration: 3.0, position: .bottom)
             toasted = true
-        }
+        }*/
     }
 }
