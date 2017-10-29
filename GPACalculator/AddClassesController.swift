@@ -32,14 +32,11 @@ class AddClassesController: UIViewController {
     @IBOutlet var multiplierBar: UISegmentedControl!
     @IBOutlet var creditsBar: UISegmentedControl!
     
-    @IBOutlet var warningLabel: UILabel!
-    
     @IBOutlet var addClassButton: UIButton!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        warningLabel.isHidden = true
         cancelButton.isEnabled = true
     }
     
@@ -56,7 +53,7 @@ class AddClassesController: UIViewController {
     @IBAction func addNewClass(_ sender: Any) {
         // Class name
         guard let className = classNameField.text, !className.isEmpty else {
-            warningLabel.isHidden = false
+            showWarning()
             print("No class name specified.")
             return
         }
@@ -73,14 +70,14 @@ class AddClassesController: UIViewController {
                 multiplier = 1.2
             default:
                 guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("No multiplier specified.")
                     return
                 }
                 
                 // Can't use guard without let.
                 guard let _multiplier = Double(multiplierText) else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("Malformed multiplier.")
                     return
                 }
@@ -89,12 +86,12 @@ class AddClassesController: UIViewController {
         
         // Current grade
         guard let currentGradeText = currentGradeField.text, !currentGradeText.isEmpty else {
-            warningLabel.isHidden = false
+            showWarning()
             print("No current grade specified.")
             return
         }
         guard let currentGrade = Int(currentGradeText) else {
-            warningLabel.isHidden = false
+            showWarning()
             print("Malformed current grade.")
             return
         }
@@ -109,14 +106,14 @@ class AddClassesController: UIViewController {
                 credits = 1.0
             default:
                 guard let creditsText = creditsField.text, !creditsText.isEmpty else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("No credits specified.")
                     return
                 }
                 
                 // Can't use guard without let.
                 guard let _credits = Double(creditsText) else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("Malformed credits.")
                     return
                 }
@@ -134,7 +131,6 @@ class AddClassesController: UIViewController {
         creditsField.text = ""
         creditsBar.selectedSegmentIndex = 0
         
-        warningLabel.isHidden = true
         cancelButton.isEnabled = false
         
         // Let button animation finish.
@@ -144,6 +140,10 @@ class AddClassesController: UIViewController {
             usleep(10000)
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func showWarning() {
+        self.view.makeToast("You have missing information.", duration: 3.0, position: .bottom)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

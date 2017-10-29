@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fyX-oO-T1c" id="9zV-h4-TMf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -283,18 +283,12 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmi-o9-6B8">
-                                <rect key="frame" x="31" y="607" width="313" height="30"/>
+                                <rect key="frame" x="31" y="558" width="313" height="30"/>
                                 <state key="normal" title="Add Class"/>
                                 <connections>
                                     <action selector="addNewClass:" destination="c0h-fF-BzU" eventType="touchUpInside" id="x8V-L8-J3X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have missing information." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-cP-Jaa">
-                                <rect key="frame" x="16" y="456" width="341" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pn-Pz-OY3">
                                 <rect key="frame" x="15" y="376" width="344" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -310,7 +304,6 @@
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="top" secondItem="6pn-Pz-OY3" secondAttribute="bottom" constant="7" id="4DD-6r-XHC"/>
                             <constraint firstItem="kzn-pw-oIf" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="5mu-hg-0O1"/>
                             <constraint firstItem="aVz-72-2dD" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="6aj-Uz-BxX"/>
-                            <constraint firstItem="U6p-cP-Jaa" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="6hF-xt-4Qq"/>
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="BYN-MW-dkr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zmi-o9-6B8" secondAttribute="trailing" constant="15" id="E7L-d9-rgA"/>
                             <constraint firstItem="Fpg-aH-Bxd" firstAttribute="top" secondItem="k8X-Rz-gNc" secondAttribute="bottom" constant="70" id="HuO-hC-okQ"/>
@@ -336,9 +329,7 @@
                             <constraint firstItem="aVz-72-2dD" firstAttribute="top" secondItem="tvo-zN-BFK" secondAttribute="bottom" constant="40" id="vKg-eu-qP2"/>
                             <constraint firstItem="36Y-JH-cmb" firstAttribute="top" secondItem="6pn-Pz-OY3" secondAttribute="bottom" constant="8" id="vMW-Pu-gbe"/>
                             <constraint firstItem="tvo-zN-BFK" firstAttribute="trailing" secondItem="WPx-oN-zun" secondAttribute="trailingMargin" id="vpd-Lh-ghy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="U6p-cP-Jaa" secondAttribute="trailing" constant="2" id="vq2-on-DZJ"/>
                             <constraint firstItem="Zmi-o9-6B8" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" constant="15" id="w8K-Wb-MG8"/>
-                            <constraint firstItem="U6p-cP-Jaa" firstAttribute="top" secondItem="Fpg-aH-Bxd" secondAttribute="bottom" constant="22" id="ykI-OG-B0H"/>
                             <constraint firstItem="k8X-Rz-gNc" firstAttribute="leading" secondItem="WPx-oN-zun" secondAttribute="leadingMargin" id="z8h-ZI-cnW"/>
                             <constraint firstItem="XOU-yn-1g9" firstAttribute="top" secondItem="Wie-mN-R8Q" secondAttribute="bottom" constant="33" id="zaC-ht-gMi"/>
                             <constraint firstItem="aVm-Mm-MB3" firstAttribute="top" secondItem="aVz-72-2dD" secondAttribute="bottom" constant="8" id="zmi-hE-1iF"/>
@@ -354,7 +345,6 @@
                         <outlet property="currentGradeField" destination="k8X-Rz-gNc" id="J4R-xY-WCj"/>
                         <outlet property="multiplierBar" destination="aVm-Mm-MB3" id="Glh-ZN-3aU"/>
                         <outlet property="multiplierField" destination="kzn-pw-oIf" id="gh5-Uo-mmS"/>
-                        <outlet property="warningLabel" destination="U6p-cP-Jaa" id="eyz-pL-vKy"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="ExitAddClassSegue" id="nA5-ux-Lxm"/>
                     </connections>
                 </viewController>
@@ -402,7 +392,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
-                                <rect key="frame" x="15" y="607" width="345" height="30"/>
+                                <rect key="frame" x="15" y="558" width="345" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="updateClass:" destination="0ka-8a-8aj" eventType="touchDown" id="tXg-8a-icc"/>
