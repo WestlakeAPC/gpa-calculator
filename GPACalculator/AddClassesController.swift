@@ -35,7 +35,7 @@ class AddClassesController: UIViewController {
     @IBOutlet var addClassButton: UIButton!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
-    var toasted = false
+    var toasting = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,10 +144,18 @@ class AddClassesController: UIViewController {
         }
     }
     
+    // Show Missing Information Warning
     func showWarning() {
-        if toasted {return}
-        toasted = true
+        
+        if toasting {return}
+        
         self.view.makeToast("You have missing information.", duration: 3.0, position: .bottom)
+        toasting = true
+        
+        DispatchQueue.global().async {
+            usleep(4000000)
+            self.toasting = false
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

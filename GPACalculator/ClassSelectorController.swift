@@ -51,7 +51,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         picker.delegate = self
         picker.dataSource = self
         
-        warningLabel.isHidden = true
         cancelButton.isEnabled = true
         
         picker.selectRow(Information.selectedRow, inComponent: 0, animated: false)
@@ -124,7 +123,7 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func updateClass(_ sender: Any) {
         // Class name
         guard let className = classNameField.text, !className.isEmpty else {
-            warningLabel.isHidden = false
+            showWarning()
             print("No class name specified.")
             return
         }
@@ -141,14 +140,14 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
                 multiplier = 1.2
             default:
                 guard let multiplierText = multiplierField.text, !multiplierText.isEmpty else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("No multiplier specified.")
                     return
                 }
                 
                 // Can't use guard without let.
                 guard let _multiplier = Double(multiplierText) else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("Malformed multiplier.")
                     return
                 }
@@ -157,12 +156,12 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         // Current grade
         guard let currentGradeText = currentGradeField.text, !currentGradeText.isEmpty else {
-            warningLabel.isHidden = false
+            showWarning()
             print("No current grade specified.")
             return
         }
         guard let currentGrade = Int(currentGradeText) else {
-            warningLabel.isHidden = false
+            showWarning()
             print("Malformed current grade.")
             return
         }
@@ -177,14 +176,14 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
                 credits = 1.0
             default:
                 guard let creditsText = creditsField.text, !creditsText.isEmpty else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("No credits specified.")
                     return
                 }
                 
                 // Can't use guard without let.
                 guard let _credits = Double(creditsText) else {
-                    warningLabel.isHidden = false
+                    showWarning()
                     print("Malformed credits.")
                     return
                 }
@@ -202,7 +201,6 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
         creditsField.text = ""
         creditsBar.selectedSegmentIndex = 0
         
-        warningLabel.isHidden = true
         cancelButton.isEnabled = false
         
         // Let button animation finish.
@@ -231,6 +229,20 @@ class ClassSelectorController: UIViewController, UIPickerViewDelegate, UIPickerV
                     self.toasting = false
                 }
             }
+        }
+    }
+    
+    // Show Missing Information Warning
+    func showWarning() {
+        
+        if toasting {return}
+        
+        self.view.makeToast("You have missing information.", duration: 3.0, position: .bottom)
+        toasting = true
+        
+        DispatchQueue.global().async {
+            usleep(4000000)
+            self.toasting = false
         }
     }
     
