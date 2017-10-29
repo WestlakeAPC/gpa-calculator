@@ -42,10 +42,6 @@ class ClassListController: UIViewController, UITableViewDelegate {
         setEditOptionEnabled()
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Information.classesAndGrades.count
     }
