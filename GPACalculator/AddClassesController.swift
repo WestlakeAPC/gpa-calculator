@@ -35,6 +35,8 @@ class AddClassesController: UIViewController {
     @IBOutlet var addClassButton: UIButton!
     @IBOutlet var cancelButton: UIBarButtonItem!
     
+    var toasted = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cancelButton.isEnabled = true
@@ -143,6 +145,8 @@ class AddClassesController: UIViewController {
     }
     
     func showWarning() {
+        if toasted {return}
+        toasted = true
         self.view.makeToast("You have missing information.", duration: 3.0, position: .bottom)
     }
     
