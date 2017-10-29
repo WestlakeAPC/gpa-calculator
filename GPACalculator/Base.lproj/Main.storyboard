@@ -549,4 +549,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="EAx-Cm-4wL"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
