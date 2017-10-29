@@ -25,6 +25,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Z6-q5-ziU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Your Classes" id="uqz-RK-MoC">
                                         <barButtonItem key="leftBarButtonItem" title="Edit Class" id="WUp-My-Vx5">
@@ -68,7 +71,7 @@
                                 <color key="backgroundColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -112,6 +115,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-WG-MHn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="GPA" id="QUo-0D-HCk"/>
                                 </items>
@@ -198,6 +204,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -223,6 +230,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wie-mN-R8Q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="New Class" id="dfe-W9-nMs">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pZF-Ly-hsJ">
@@ -385,6 +395,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEY-Yu-Mol">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Edit Information" id="QQJ-Rz-RSJ">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uc9-vR-djH">
@@ -562,7 +575,7 @@
         <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nA5-ux-Lxm"/>
+        <segue reference="EAx-Cm-4wL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
