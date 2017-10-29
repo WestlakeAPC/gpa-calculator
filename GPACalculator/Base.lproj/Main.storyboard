@@ -20,10 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Z6-q5-ziU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="q4M-ML-Jq4"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,7 +43,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-Be-raa">
-                                <rect key="frame" x="0.0" y="66" width="375" height="552"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="581"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="fyX-oO-T1c">
@@ -64,11 +61,11 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Swipe left to delete classes." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-Oy-kbT">
-                                <rect key="frame" x="0.0" y="44" width="375" height="22"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="22"/>
                                 <color key="backgroundColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="PQT-GX-1B6"/>
+                                    <constraint firstAttribute="height" constant="22" id="R4C-ij-kUw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,16 +75,16 @@
                         <color key="backgroundColor" red="0.99473684210000002" green="0.98947368420000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="leading" secondItem="lhU-JY-DU3" secondAttribute="leading" id="2nc-8Z-TqH"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="lhU-JY-DU3" secondAttribute="leading" id="7tr-JV-i5S"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="lhU-JY-DU3" secondAttribute="leading" id="BNL-Ar-G1z"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="CHv-Cz-nWh"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="bottom" secondItem="lhU-JY-DU3" secondAttribute="bottom" id="D0w-UV-0HI"/>
-                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="trailing" secondItem="lhU-JY-DU3" secondAttribute="trailing" id="N08-4v-lxP"/>
-                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="bottom" id="TFC-FH-mJz"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="trailing" secondItem="lhU-JY-DU3" secondAttribute="trailing" id="Zov-Vj-EBY"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="trailing" secondItem="lhU-JY-DU3" secondAttribute="trailing" id="gjV-Au-M63"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="top" secondItem="6bz-Oy-kbT" secondAttribute="bottom" id="k4J-eP-AtT"/>
+                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="lhU-JY-DU3" secondAttribute="leading" id="0fH-ID-3WL"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="leading" secondItem="lhU-JY-DU3" secondAttribute="leading" id="5x3-DU-qvy"/>
+                            <constraint firstItem="lhU-JY-DU3" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="top" id="Bac-t7-t3C"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="trailing" secondItem="lhU-JY-DU3" secondAttribute="trailing" id="Hom-hv-bCV"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="trailing" secondItem="lhU-JY-DU3" secondAttribute="trailing" id="R8o-Ih-ddP"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="top" secondItem="6bz-Oy-kbT" secondAttribute="bottom" id="bv7-gT-29e"/>
+                            <constraint firstAttribute="bottom" secondItem="Cyt-Be-raa" secondAttribute="bottom" id="bvo-Jd-ziT"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="bottom" id="ddE-D7-VsQ"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="lhU-JY-DU3" secondAttribute="leading" id="eCq-K9-16a"/>
+                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="trailing" secondItem="lhU-JY-DU3" secondAttribute="trailing" id="jWN-yW-TF2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lhU-JY-DU3"/>
                     </view>
@@ -197,6 +194,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kR3-d9-cay"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

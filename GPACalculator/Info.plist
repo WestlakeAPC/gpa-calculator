@@ -32,8 +32,6 @@
 	</array>
 	<key>UIRequiresFullScreen</key>
 	<true/>
-	<key>UIStatusBarHidden</key>
-	<true/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -56,6 +54,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 </dict>
 </plist>
