@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Z6-q5-ziU">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Z6-q5-ziU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -45,6 +45,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-Be-raa">
                                 <rect key="frame" x="0.0" y="66" width="375" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="552" id="9fa-TD-yJH"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="fyX-oO-T1c">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -60,28 +63,27 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="k1R-IQ-h9h"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to delete classes." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-Oy-kbT">
-                                <rect key="frame" x="16" y="44" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="    Swipe left to delete classes." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-Oy-kbT">
+                                <rect key="frame" x="0.0" y="44" width="380" height="21"/>
+                                <color key="backgroundColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="0.99473684210000002" green="0.98947368420000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="bottom" id="5OV-Ym-qUN"/>
-                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="KLE-Yk-hlO"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="OzN-0P-ZA5"/>
-                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="PRb-V0-78z"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="Cyt-Be-raa" secondAttribute="leading" id="Vg3-O7-dsF"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="WE8-V2-wdx"/>
-                            <constraint firstAttribute="trailing" secondItem="Cyt-Be-raa" secondAttribute="trailing" id="i8J-5Z-zUh"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="trailing" secondItem="Cyt-Be-raa" secondAttribute="trailing" id="jW4-Qm-ZuE"/>
-                            <constraint firstItem="2Z6-q5-ziU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="pGV-h3-XUN"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Cyt-Be-raa" secondAttribute="bottom" id="q5b-Dv-aEH"/>
-                            <constraint firstItem="Cyt-Be-raa" firstAttribute="top" secondItem="6bz-Oy-kbT" secondAttribute="bottom" constant="1" id="qbP-4z-fxz"/>
-                            <constraint firstAttribute="trailing" secondItem="2Z6-q5-ziU" secondAttribute="trailing" id="uQH-wN-0ez"/>
+                            <constraint firstAttribute="trailing" secondItem="Cyt-Be-raa" secondAttribute="trailing" id="0xj-nO-9Fe"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="trailing" secondItem="2Z6-q5-ziU" secondAttribute="trailing" id="BrF-kh-abs"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="top" secondItem="2Z6-q5-ziU" secondAttribute="bottom" id="Jr2-V3-YPp"/>
+                            <constraint firstItem="6bz-Oy-kbT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="M6g-Qn-WUF"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="MOj-fC-mhO"/>
+                            <constraint firstAttribute="trailing" secondItem="6bz-Oy-kbT" secondAttribute="trailing" id="RPn-hP-KHl"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="top" secondItem="6bz-Oy-kbT" secondAttribute="bottom" id="bn7-9Y-iiv"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="6bz-Oy-kbT" secondAttribute="leading" id="gEH-V2-4Mb"/>
+                            <constraint firstItem="Cyt-Be-raa" firstAttribute="leading" secondItem="2Z6-q5-ziU" secondAttribute="leading" id="kqv-sr-P8f"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Classes" image="ic_format_list_numbered_48pt" id="acW-dT-cKf"/>
@@ -108,6 +110,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-WG-MHn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="barTintColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="GPA" id="QUo-0D-HCk"/>
                                 </items>
@@ -193,7 +196,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.32301132220000001" blue="0.1713118652" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
@@ -239,6 +241,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: Latin 12 AP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvo-zN-BFK">
                                 <rect key="frame" x="16" y="106" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -251,18 +254,21 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Other" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzn-pw-oIf">
                                 <rect key="frame" x="301" y="205" width="58" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8X-Rz-gNc">
                                 <rect key="frame" x="16" y="304" width="339" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Other" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fpg-aH-Bxd">
                                 <rect key="frame" x="301" y="404" width="58" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
@@ -275,6 +281,7 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aVm-Mm-MB3">
                                 <rect key="frame" x="16" y="205" width="277" height="29"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="x1"/>
                                     <segment title="x1.1"/>
@@ -284,6 +291,7 @@
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="36Y-JH-cmb">
                                 <rect key="frame" x="16" y="405" width="277" height="29"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="0.5"/>
                                     <segment title="1.0"/>
@@ -553,7 +561,7 @@
         <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EAx-Cm-4wL"/>
+        <segue reference="nA5-ux-Lxm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.2581153035" green="0.61022597710000004" blue="0.69697469729999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
