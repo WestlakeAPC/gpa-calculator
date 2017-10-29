@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +50,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fyX-oO-T1c" id="9zV-h4-TMf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -289,7 +289,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmi-o9-6B8">
-                                <rect key="frame" x="31" y="558" width="313" height="30"/>
+                                <rect key="frame" x="31" y="607" width="313" height="30"/>
                                 <state key="normal" title="Add Class"/>
                                 <connections>
                                     <action selector="addNewClass:" destination="c0h-fF-BzU" eventType="touchUpInside" id="x8V-L8-J3X"/>
@@ -401,18 +401,12 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-h7-Sje">
-                                <rect key="frame" x="15" y="558" width="345" height="30"/>
+                                <rect key="frame" x="15" y="607" width="345" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="updateClass:" destination="0ka-8a-8aj" eventType="touchDown" id="tXg-8a-icc"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have missing information." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOZ-6o-pTV">
-                                <rect key="frame" x="15" y="481" width="345" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMd-4d-VZq">
                                 <rect key="frame" x="15" y="199" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -489,7 +483,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="EMd-4d-VZq" secondAttribute="trailing" constant="1" id="4zC-9l-DUD"/>
                             <constraint firstItem="dB6-9i-k0S" firstAttribute="top" secondItem="SNz-ld-VYY" secondAttribute="bottom" constant="16" id="9oB-Hp-AAx"/>
                             <constraint firstAttribute="trailing" secondItem="dbm-FZ-S7B" secondAttribute="trailing" constant="17" id="AlC-7f-kRs"/>
-                            <constraint firstItem="sOZ-6o-pTV" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="FZE-AT-ii2"/>
                             <constraint firstItem="qqc-Un-rAN" firstAttribute="top" secondItem="m2e-h7-Sje" secondAttribute="bottom" constant="30" id="LmD-jP-RLd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fld-cv-XDb" secondAttribute="trailing" constant="1" id="NNy-4C-RH7"/>
                             <constraint firstItem="hfR-MI-cDB" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="NP9-IZ-aPv"/>
@@ -508,10 +501,8 @@
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="trailing" secondItem="pEY-Yu-Mol" secondAttribute="trailing" id="a9G-HM-0kA"/>
                             <constraint firstItem="dB6-9i-k0S" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="aLw-hK-pa1"/>
                             <constraint firstItem="aNi-Nd-dId" firstAttribute="top" secondItem="hfR-MI-cDB" secondAttribute="bottom" constant="7" id="bF1-Qk-1dK"/>
-                            <constraint firstAttribute="trailing" secondItem="sOZ-6o-pTV" secondAttribute="trailing" constant="15" id="cR4-p5-g1x"/>
                             <constraint firstItem="FeU-PC-6UV" firstAttribute="top" secondItem="5tl-yN-EGX" secondAttribute="top" constant="91" id="cwc-lb-jaS"/>
                             <constraint firstItem="WSd-GO-fCa" firstAttribute="top" secondItem="dbm-FZ-S7B" secondAttribute="bottom" constant="9" id="eEv-Rl-R4P"/>
-                            <constraint firstItem="sOZ-6o-pTV" firstAttribute="top" secondItem="aNi-Nd-dId" secondAttribute="bottom" constant="9" id="efb-m8-plw"/>
                             <constraint firstItem="Fld-cv-XDb" firstAttribute="top" secondItem="dbm-FZ-S7B" secondAttribute="bottom" constant="9" id="fiN-kr-QUg"/>
                             <constraint firstItem="kAX-TC-Ga4" firstAttribute="leading" secondItem="5tl-yN-EGX" secondAttribute="leading" constant="15" id="gHA-sI-2s7"/>
                             <constraint firstItem="SNz-ld-VYY" firstAttribute="trailing" secondItem="5tl-yN-EGX" secondAttribute="trailingMargin" id="gaf-U2-v2f"/>
@@ -541,7 +532,6 @@
                         <outlet property="multiplierBar" destination="WSd-GO-fCa" id="PeH-mu-tV0"/>
                         <outlet property="multiplierField" destination="Fld-cv-XDb" id="kre-cq-shg"/>
                         <outlet property="picker" destination="FeU-PC-6UV" id="Nki-tn-m5z"/>
-                        <outlet property="warningLabel" destination="sOZ-6o-pTV" id="Wg6-aa-j83"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="ExitSelectorSegue" id="EAx-Cm-4wL"/>
                     </connections>
                 </viewController>
@@ -555,6 +545,6 @@
         <image name="ic_trending_up_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nA5-ux-Lxm"/>
+        <segue reference="EAx-Cm-4wL"/>
     </inferredMetricsTieBreakers>
 </document>
