@@ -60,10 +60,43 @@ class Information: NSObject, NSCoding {
     
     public static func initializeArray() {
         // Can't use guard without let.
-        guard let data = Information.keyValueStore.data(forKey: "savedList"),
-              let classesAndGrades = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Information] else {
+        
+        print("iClouds Data: \(UserDefaults.standard.object(forKey: "savedList") as? [Information]) \n \(NSKeyedUnarchiver.unarchiveObject(with: Information.keyValueStore.data(forKey: "timeStamp")!) as? Date)")
+        
+        // Add time stamp if there is data on iclouds
+        if Information.keyValueStore.data(forKey: "savedList") != nil && Information.keyValueStore.data(forKey: "timeStamp") == nil {
+            ArchiveDataSystem.archiveGradeData(infoList: (UserDefaults.standard.object(forKey: "savedList") as? [Information])!, key: "savedList")
+            print("Using array from iclouds and creating time stamp")
             return
+        }
+        
+        // If there is no data stored
+        if UserDefaults.standard.object(forKey: "savedList") == nil && Information.keyValueStore.data(forKey: "savedList") == nil{
+            Information.classesAndGrades = [Information]()
+            print("Using new array")
+            return
+            
+            // If there is data in userdefaults and iclouds, compare time stamps
+        } else if UserDefaults.standard.object(forKey: "timeStamp") != nil && Information.keyValueStore.data(forKey: "timeStamp") != nil {
+            
+            let cloudDate = NSKeyedUnarchiver.unarchiveObject(with: Information.keyValueStore.data(forKey: "timeStamp")!) as? Date
+            let udDate = UserDefaults.standard.object(forKey: "timeStamp") as? Date
+            
+            if(udDate?.compare(cloudDate!) == .orderedDescending) {
+                print("Using data from userdefaults")
+                Information.classesAndGrades = (NSKeyedUnarchiver.unarchiveObject(with: (UserDefaults.standard.object(forKey: "savedList") as! Data)) as? [Information])!
+                return
+            }
+            
+        }
+        
+        print("Using data from iclouds")
+        // Use data from iclouds if no conditions are met
+        guard let data = Information.keyValueStore.data(forKey: "savedList"),
+            let classesAndGrades = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Information] else {
+                return
         }
         Information.classesAndGrades = classesAndGrades
     }
 }
+
