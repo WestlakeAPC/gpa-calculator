@@ -16,7 +16,7 @@ class ArchiveDataSystem {
         Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: infoList), forKey: key)
         Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: currTime), forKey: "timeStamp")
         
-        UserDefaults.standard.set(infoList, forKey: key)
+        UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: infoList), forKey: key)
         UserDefaults.standard.set(currTime, forKey: "timeStamp")
     }
 }
