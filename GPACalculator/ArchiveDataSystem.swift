@@ -11,7 +11,7 @@ import Foundation
 class ArchiveDataSystem {
     // Enable storing for userdefaults in this function
     static func archiveGradeData(infoList : [Information], key: String) {
-        var currTime = Date();
+        let currTime = Date();
         
         Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: infoList), forKey: key)
         Information.keyValueStore.set(NSKeyedArchiver.archivedData(withRootObject: currTime), forKey: "timeStamp")
