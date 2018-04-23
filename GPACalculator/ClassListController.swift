@@ -30,7 +30,6 @@ class ClassListController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Information.initializeArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
