@@ -24,6 +24,8 @@ import Foundation
 
 class Information: NSObject, NSCoding {
     
+    override public var description: String { return "\(name): \(grade) *\(multiplier) credit: \(credits)\n" }
+    
     static var classesAndGrades = [Information]()
     static let keyValueStore = NSUbiquitousKeyValueStore()
     static var selectedRow: Int = 0
