@@ -59,14 +59,12 @@ class Information: NSObject, NSCoding {
     }
     
     public static func initializeArray() {
-        // Can't use guard without let.
-        
-        print("iClouds Data: \(UserDefaults.standard.object(forKey: "savedList") as? [Information]) \n \(NSKeyedUnarchiver.unarchiveObject(with: Information.keyValueStore.data(forKey: "timeStamp")!) as? Date)")
-        
         // Add time stamp if there is data on iclouds
         if Information.keyValueStore.data(forKey: "savedList") != nil && Information.keyValueStore.data(forKey: "timeStamp") == nil {
-            ArchiveDataSystem.archiveGradeData(infoList: (UserDefaults.standard.object(forKey: "savedList") as? [Information])!, key: "savedList")
+            let i = NSKeyedUnarchiver.unarchiveObject(with: Information.keyValueStore.data(forKey: "savedList")!)! as? [Information]
+            ArchiveDataSystem.archiveGradeData(infoList: i!, key: "savedList")
             print("Using array from iclouds and creating time stamp")
+            initializeArray()
             return
         }
         
@@ -76,7 +74,7 @@ class Information: NSObject, NSCoding {
             print("Using new array")
             return
             
-            // If there is data in userdefaults and iclouds, compare time stamps
+        // If there is data in userdefaults and iclouds, compare time stamps
         } else if UserDefaults.standard.object(forKey: "timeStamp") != nil && Information.keyValueStore.data(forKey: "timeStamp") != nil {
             
             let cloudDate = NSKeyedUnarchiver.unarchiveObject(with: Information.keyValueStore.data(forKey: "timeStamp")!) as? Date
